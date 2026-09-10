@@ -4,7 +4,7 @@ import wilhelmImg from "@/assets/IntelligenceX/Dirk-Wilhelm_2026.jpg";
 import julianTanImg from "@/assets/IntelligenceX/Julian_Tan.png";
 import lukasHuberImg from "@/assets/IntelligenceX/Lukas Huber Portrait.jpg";
 import larryImg from "@/assets/IntelligenceX/larry.jpeg";
-import teoImg from "@/assets/IntelligenceX/teo.jpg";
+import georgeImg from "@/assets/IntelligenceX/george.png";
 import danielImg from "@/assets/IntelligenceX/daniel.jpeg";
 import yingImg from "@/assets/IntelligenceX/ying.jpeg";
 import nikolaImg from "@/assets/IntelligenceX/nikola.jpeg";
@@ -21,11 +21,11 @@ interface PremeetingSpeaker {
 
 const speakers: PremeetingSpeaker[] = [
   {
-    name: "Prof. Teo Chung Piaw",
-    role: "Dean, NUS Business School",
+    name: "Mr George Loh",
+    role: "Associate Vice President (Strategic Partnership)",
     affiliation: "National University of Singapore (NUS)",
-    photo: teoImg,
-    bio: "Professor Teo Chung Piaw is Dean of the NUS Business School and Stephen Riady Professor in Business at the National University of Singapore (NUS). He leads the School's strategic direction across education, research, industry engagement and global partnerships, with a vision of building an AI-native business school that equips future leaders to thrive in an increasingly AI-enabled world. Prior to his appointment as Dean, Prof Teo served as Executive Director of the NUS Institute of Operations Research and Analytics (IORA), where he spearheaded interdisciplinary research in optimisation, artificial intelligence, supply chain resilience and public sector analytics. He also co-directed the SIA–NUS Digital Aviation Corporate Laboratory, advancing research and innovation at the intersection of AI, operations research and aviation. An internationally recognised scholar in operations research and management science, Prof Teo's research focuses on optimisation under uncertainty, large-scale optimisation, revenue management, supply chain management, transportation, healthcare, and AI-driven decision making. His work has been published extensively in leading journals and has influenced both academic research and industry practice. Prof Teo has provided editorial leadership as a Department Editor for Management Science and Operations Research, two of the leading journals in the field of operations research and management science. He is a Fellow of the Institute for Operations Research and the Management Sciences (INFORMS), in recognition of his sustained contributions to research, practice and professional service. As Dean, Prof Teo is leading the transformation of NUS Business School into an AI-native business school by integrating artificial intelligence across education, research and industry engagement. He is committed to developing innovative programmes, strengthening interdisciplinary research, fostering deeper partnerships with industry, and preparing graduates to lead responsibly in an AI-driven global economy.",
+    photo: georgeImg,
+    bio: "Mr George Loh is Associate Vice President (Strategic Partnership) at the National University of Singapore (NUS), leading the Strategic Partnership Office (SPO) to shape governance structures supporting strategic programmes and cultivate partnerships with the University's stakeholders. Concurrently, he drives strategic initiatives and fosters industry collaborations at the Office of Deputy President (Research & Technology). George joined NUS in 2020 as Senior Director (Strategic Collaboration and Partnership). Prior to this, he had an extensive career spanning over 30 years in Singapore's public sector, holding key appointments in the Defence Science and Technology Agency, Ministry of Defence (MINDEF), and National Research Foundation (NRF).",
   },
   {
     name: "Prof Dr. Dirk Wilhelm",
