@@ -30,7 +30,7 @@ export default function IntelligenceX2026Registration() {
   const [isiMemberId, setIsiMemberId] = useState("");
   const [nusQicMemberId, setNusQicMemberId] = useState("");
   const [handsOnTutorialPref, setHandsOnTutorialPref] = useState<
-    "" | "quantum" | "ai_coding" | "na"
+    "" | "quantum" | "na"
   >("");
   const [dietary, setDietary] = useState("");
   const [dietaryOther, setDietaryOther] = useState("");
@@ -428,14 +428,13 @@ export default function IntelligenceX2026Registration() {
                   value={handsOnTutorialPref}
                   onChange={(e) =>
                     setHandsOnTutorialPref(
-                      e.target.value as "" | "quantum" | "ai_coding" | "na",
+                      e.target.value as "" | "quantum" | "na",
                     )
                   }
                   className="w-full max-w-xl px-3 py-2 border border-gray-300 rounded-md bg-white focus:ring-[#ee7c01] focus:border-[#ee7c01]"
                 >
                   
                   <option value="quantum">Quantum Computing — Vishal Bajpe (IBM Quantum)</option>
-                  <option value="ai_coding">Agentic Coding — Prof. Dr. Thorsten Koch (TU Berlin &amp; ZIB)</option>
                   <option value="na">No preference / Not attending tutorial</option>
                 </select>
                 <p className="mt-2 text-xs text-gray-600 leading-relaxed max-w-3xl">
