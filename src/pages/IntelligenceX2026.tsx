@@ -859,7 +859,6 @@ export default function IntelligenceX2026() {
               <li>Nikolaus Hautsch (University of Vienna, Austria)</li>
               <li>Tomoyuki Higuchi (Chuo University, Japan)</li>
               <li>Satoshi Ito (The Institute of Statistical Mathematics, Japan)</li>
-              <li>Tal Kachman (Humboldt-Universität zu Berlin, Germany)</li>
               <li>Thorsten Koch (Zuse Institute Berlin &amp; TU Berlin, Germany)</li>
               <li>Stefan Lessmann (Humboldt-Universität zu Berlin, Germany)</li>
               <li>Sven Leyffer (Argonne National Laboratory, USA)</li>

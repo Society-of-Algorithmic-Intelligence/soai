@@ -11,6 +11,7 @@ import hoongImg from "@/assets/IntelligenceX/hoong.jpg";
 import mingshiImg from "@/assets/IntelligenceX/mingshi.jpg";
 import taiImg from "@/assets/IntelligenceX/tai.png";
 import tohImg from "@/assets/IntelligenceX/toh.png";
+import siminImg from "@/assets/IntelligenceX/simin.png";
 import { ExpandableBio } from "@/components/ui/ExpandableBio";
 
 type Panel = {
@@ -127,6 +128,15 @@ const panelists: Panelist[] = [
     bio: "Shaukat Ali is a Chief Research Scientist, Research Professor, and Head of Department at Simula Research Laboratory in Oslo, Norway. He is the director of the Norwegian Quantum Software Center. His research focuses on developing advanced methods for engineering cyber-physical systems using artificial intelligence, digital twins, and quantum computing. He has led numerous national and European research projects in software testing, search-based software engineering, model-based systems engineering, and quantum software engineering. Dr. Ali is a co-founder of several key initiatives in the emerging field of quantum software, including the International Workshop on Quantum Software Engineering (held at ICSE), the International Conference on Quantum Software, and the QC+AI Workshop (held at AAAI). He also represents Simula in multiple national and international quantum computing research and industry networks.",
     weblink: "https://www.simula.no/people/shaukat",
     panelTitle: "The Future of Quantum × AI",
+  },
+  {
+    name: "Si Min Chan",
+    designation: "Developer Relations Manager, Quantum Computing, APAC",
+    affiliation: "NVIDIA",
+    photo: siminImg,
+    bio: "Dr Si Min Chan is a Developer Relations Manager at NVIDIA, leading quantum computing collaborations and partnerships across the Asia-Pacific region. With a research background in theoretical and computational physics, she works at the intersection of quantum computing, accelerated computing, and industry collaboration, bringing together research institutions, technology partners, and industry stakeholders to advance the quantum computing ecosystem and accelerate the path towards useful quantum computing.",
+    weblink: "https://www.linkedin.com/in/si-min-chan",
+    panelTitle: "Agentic AI and Autonomous Systems",
   },
   {
     name: "Huaxing Chen",
