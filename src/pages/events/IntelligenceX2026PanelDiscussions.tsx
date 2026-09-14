@@ -9,6 +9,8 @@ import tadashiImg from "@/assets/IntelligenceX/tadashi.jpg";
 import shaukatImg from "@/assets/IntelligenceX/shaukat.jpg";
 import hoongImg from "@/assets/IntelligenceX/hoong.jpg";
 import mingshiImg from "@/assets/IntelligenceX/mingshi.jpg";
+import taiImg from "@/assets/IntelligenceX/tai.png";
+import tohImg from "@/assets/IntelligenceX/toh.png";
 import { ExpandableBio } from "@/components/ui/ExpandableBio";
 
 type Panel = {
@@ -181,6 +183,7 @@ const panelists: Panelist[] = [
     name: "Tai E Shyong",
     designation: "Director, Centre for Precision Health; Chief Medical Officer, PRECISE",
     affiliation: "National University Health System (NUHS); Professor, National University of Singapore",
+    photo: taiImg,
     bio: "Prof. Tai E Shyong is Director of the Centre for Precision Health, NUHS, and Chief Medical Officer of PRECISE, as well as Senior Consultant in Endocrinology at NUH and Professor at NUS. His work spans precision medicine, genomics, metabolic disease and population health.",
     panelTitle: "Quantum × AI for Healthcare and Life Sciences",
   },
@@ -188,6 +191,7 @@ const panelists: Panelist[] = [
     name: "Toh Han Chong",
     designation: "Deputy CEO (Strategic Partnerships) and Senior Consultant",
     affiliation: "National Cancer Centre Singapore; Professor, Duke-NUS Medical School",
+    photo: tohImg,
     bio: "Prof. Toh Han Chong is Deputy CEO (Strategic Partnerships) and Senior Consultant at the National Cancer Centre Singapore, and Professor at Duke-NUS Medical School. His work spans oncology, cancer immunotherapy, cell therapy, clinical trials and translational medicine.",
     panelTitle: "Quantum × AI for Healthcare and Life Sciences",
   },
