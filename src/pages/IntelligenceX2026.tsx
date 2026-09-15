@@ -48,6 +48,7 @@ const sectionLinks = [
   { id: "panel-discussions", label: "Panel Discussions" },
   { id: "executive-track", label: "Executive Track" },
   { id: "scientific-committee", label: "Scientific Committee" },
+  { id: "local-organizing-committee", label: "Local Committee" },
 ] as const;
 
 type SectionId = (typeof sectionLinks)[number]["id"];
@@ -851,6 +852,28 @@ export default function IntelligenceX2026() {
                 );
               })}
             </div>
+          </section>
+
+          {/* Local Organizing Committee */}
+          <section id="local-organizing-committee" className="scroll-mt-24 space-y-6">
+            <h2 className="text-2xl font-semibold text-gray-900">
+              Local Organizing Committee
+            </h2>
+            {/* Member list – last name A–Z */}
+            <ul className="list-disc pl-6 space-y-2 text-gray-800 leading-relaxed text-sm md:text-base">
+              <li>Tim Herrmann</li>
+              <li>Hanming Hu</li>
+              <li>Yu Zheng Liaw</li>
+              <li>Kailiang Liu</li>
+              <li>Jianlong Lu</li>
+              <li>Hoa Nguyen</li>
+              <li>Sofia Pawlowski</li>
+              <li>Dennis Thumm</li>
+              <li>Richard Weiss</li>
+              <li>Edward Yang</li>
+              <li>Hongrui Zhang</li>
+              <li>Yongqi Zhou</li>
+            </ul>
           </section>
 
           {/* Back link */}
