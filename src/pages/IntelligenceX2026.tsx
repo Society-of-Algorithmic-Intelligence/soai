@@ -375,55 +375,6 @@ export default function IntelligenceX2026() {
                 🏆 AI Algorithmic Trading Competition
               </a>
             </div>
-            <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
-              <a
-                href="/events/Call%20for%20Invited%20Sessions.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 text-base font-semibold text-[#003d7b] hover:text-[#002a57]"
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <path d="M14 2v6h6" />
-                </svg>
-                Call for Invited Sessions
-              </a>
-              <a
-                href="/events/Call%20for%20Hackathon%20Participation.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 text-base font-semibold text-[#003d7b] hover:text-[#002a57]"
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <path d="M14 2v6h6" />
-                </svg>
-                Call for Hackathon Participation
-              </a>
-              <a
-                href="/events/Call%20for%20Contributed%20Talks.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 text-base font-semibold text-[#003d7b] hover:text-[#002a57]"
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <path d="M14 2v6h6" />
-                </svg>
-                Call for Contributed Talks
-              </a>
-              <Link
-                to="/events/intelligencex-2026/travel-support"
-                className="inline-flex items-center gap-2 text-base font-semibold text-[#003d7b] hover:text-[#002a57]"
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3" />
-                  <rect x="9" y="11" width="14" height="10" rx="2" />
-                  <path d="M16 11V9" />
-                </svg>
-                Travel Support Programme
-              </Link>
-            </div>
           </section>
 
           {/* Event information summary */}
@@ -775,17 +726,16 @@ export default function IntelligenceX2026() {
             <h2 className="text-2xl font-semibold text-gray-900">Panel Discussions</h2>
             <div className="rounded-xl border border-[#003d7b]/20 bg-[#f0f6ff] px-6 py-5 space-y-3">
               <p className="text-sm text-gray-700 leading-relaxed">
-                Six panels bringing together leading voices from academia, industry, and policy to debate the
+                Five panels bringing together leading voices from academia, industry, and policy to debate the
                 frontiers of Quantum × AI — spanning quantum computing, agentic AI, healthcare, finance,
-                education, and the reality of quantum advantage.
+                and education.
               </p>
               <ul className="grid gap-1.5 text-sm text-gray-700 sm:grid-cols-2">
-                <li>The Future of Quantum × AI</li>
                 <li>Agentic AI and Autonomous Systems</li>
                 <li>Quantum × AI for Healthcare and Life Sciences</li>
                 <li>Quantum × AI for Finance and Risk</li>
                 <li>Research, Education, and Talent for the Intelligence Era</li>
-                <li>The Quantum Advantage and Quantum Supremacy: Myth or Reality?</li>
+                <li>The Future of Quantum × AI</li>
               </ul>
               <Link
                 to="/events/intelligencex-2026/panel-discussions"
