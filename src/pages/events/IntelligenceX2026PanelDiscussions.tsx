@@ -12,6 +12,9 @@ import mingshiImg from "@/assets/IntelligenceX/mingshi.jpg";
 import taiImg from "@/assets/IntelligenceX/tai.png";
 import tohImg from "@/assets/IntelligenceX/toh.png";
 import siminImg from "@/assets/IntelligenceX/simin.png";
+import patrickImg from "@/assets/IntelligenceX/patrick.jpg";
+import rosaImg from "@/assets/IntelligenceX/rosa.png";
+import andyImg from "@/assets/IntelligenceX/andy.jpg";
 import { ExpandableBio } from "@/components/ui/ExpandableBio";
 
 type Panel = {
@@ -59,11 +62,11 @@ const panels: Panel[] = [
   {
     id: "healthcare-life-sciences",
     title: "Quantum × AI for Healthcare and Life Sciences",
-    schedule: "24 September 2026 · 1:30–2:30 PM",
+    schedule: "24 September 2026 · 2:00–3:00 PM",
     theme:
       "Transforming healthcare through AI and quantum-enabled advances in diagnosis, drug discovery, precision medicine, clinical decision support, and healthcare operations.",
     moderatorName: "Patrick Chia",
-    panelistNames: ["Mingshi Koh", "Tai E Shyong", "Toh Han Chong"],
+    panelistNames: ["Mingshi Koh", "Rosa So", "Tai E Shyong", "Toh Han Chong"],
   },
   {
     id: "finance-risk",
@@ -81,8 +84,7 @@ const panels: Panel[] = [
     theme:
       "Preparing the next generation of researchers, professionals, and leaders through interdisciplinary education, lifelong learning, and new models of collaboration in the age of AI and quantum technologies.",
     moderatorName: "Ying Chen",
-    panelistNames: ["Xin Guo"],
-    additionalPanelistsPending: true,
+    panelistNames: ["Andy Choi", "Xin Guo"],
   },
   {
     id: "future-quantum-ai",
@@ -104,6 +106,7 @@ const moderators: Moderator[] = [
   {
     name: "Patrick Chia",
     affiliation: "National University Health System, Singapore",
+    photo: patrickImg,
     bio: "Dr. Patrick Chia is Director of the Data Insights Unit at NUHS and Assistant Group Chief Medical Informatics Officer, bringing experience across healthcare data, AI, clinical informatics and translation.",
   },
   {
@@ -153,6 +156,14 @@ const panelists: Panelist[] = [
     bio: "Huaxing Chen is a senior data analytics and AI leader with extensive experience applying quantitative methods, advanced analytics, machine learning and artificial intelligence to complex financial and business problems. He currently leads data and analytics initiatives in a regional bank wholesale division across areas including client analytics, risk, transaction banking, financial markets and AI-enabled decision support. His career has spanned a diverse range of industries and institutions. Earlier in his career, he worked with the SMU–Carnegie Mellon University Living Analytics Research Centre, focusing on applied optimisation and analytics research, before taking on analytics and revenue optimisation roles with organisations including Marina Bay Sands and Visa, where he worked extensively with large-scale customer, transaction and commercial data. His experience has also included technology, operations research and entrepreneurial leadership roles in quantitative trading before moving into wholesale banking. Alongside his industry career, Huaxing has been an Adjunct Faculty member at the National University of Singapore (NUS) Business School since 2018, teaching postgraduate students in analytics and data engineering with applications in financial services. He is also a regular speaker and panel participant at universities, industry conferences and professional forums, sharing perspectives on quantitative analytics, AI, data and the transformation of financial services. His interests lie at the intersection of artificial intelligence, optimisation and real-world financial decision-making, particularly in translating rigorous quantitative research and emerging technologies into scalable business impact.",
   },
   {
+    name: "Andy Choi",
+    surname: "Choi",
+    designation: "Deputy Director, SMEs Go Digital division",
+    affiliation: "Infocomm Media Development Authority (IMDA), Singapore",
+    photo: andyImg,
+    bio: "Andy Choi has held leadership roles in digital product creation and management across multiple enterprises, start-ups, and SMEs in the last 14 years, as COO of Carro, Group UX Lead for Great Eastern Life, and Co-founder at Wildcats.io. With a strong desire to help companies achieve their business goals through deeper understanding and smarter adoption of technology, Andy is now the Deputy Director of the SMEs Go Digital division in IMDA, directing the Industry Digital Plans and Pre-Approval of PSG solutions for all 23 sectors embarking on Industry Transformation.",
+  },
+  {
     name: "Xin Guo",
     surname: "Guo",
     designation: "Professor and Chair, Department of Industrial Engineering & Operations Research",
@@ -194,6 +205,15 @@ const panelists: Panelist[] = [
     photo: hoongImg,
     bio: "Professor Lau Hoong Chuin is Professor of Computer Science at the School of Computing and Information Systems, Singapore Management University (SMU), and Senior Principal Scientist at the Institute of High Performance Computing, under the Singapore Agency for Science, Technology and Research (A*STAR). From 2019 to 2022, he served as Specially Appointed Professor of AI and Information at the Tokyo Institute of Technology, Japan. He has also held visiting appointments at the Wharton Business School of the University of Pennsylvania (USA), Eindhoven University of Technology (Netherlands), and Tohoku University (Japan). Professor Lau is an accomplished scholar who works at the interface of AI and Operations Research. His research spans a broad spectrum—from algorithmic theory to applied optimization and AI systems. His work on vehicle routing and workforce scheduling has not only advanced academic understanding but has also led to real-world deployments in healthcare, supply chains and logistics. A notable outcome of his applied research is the Collaborative Urban Delivery Optimization (CUDO) technology, featured as one of AI Singapore's flagship products, which has been patented and successfully licensed for industrial use. A leading figure in hybrid classical–quantum optimization, Professor Lau is pioneering the integration of quantum-inspired and hybrid computing paradigms for tackling large-scale combinatorial and operational optimization problems, such as vehicle routing and scheduling. He has received numerous honors, including the Lee Kuan Yew Research Fellowship, recognition among the world's top 2% scientists in Artificial Intelligence (in a global Stanford University study since 2020), and the Outstanding Professor Award from the Industrial Engineering and Operations Management Society in 2021. Professor Lau has over a decade of experience leading nationally funded research laboratories. He served as Director of the Fujitsu–SMU Urban Computing and Engineering Corporate Lab (2014–2021) and as Deputy Director of the Living Analytics Research Lab (2011–2015). He has secured, as Principal Investigator, more than SGD 30 million in competitive grants from government and industry. In recent years, he has been Principal Investigator for projects funded by IBM, the Ministry of Home Affairs, Fujitsu Labs (Japan), and three AI Singapore “100 Experiments for Research (100E4R)” initiatives—each culminating in extensive field trials with partners such as the Singapore Police Force, Tan Tock Seng Hospital, the Maritime and Port Authority of Singapore, Keppel Logistics, and Jurong Port. Beyond his research leadership, Professor Lau has made significant national and international contributions to the AI and OR communities. He chaired AI Singapore's Grand Challenge Program Committee in Urban Solutions, and since 2020 he serves on the selection committee for the President's Science and Technology Awards, Singapore's highest scientific honor. He also serves on multiple national committees and international conference program boards (AAAI/IAAI, IJCAI, ICAPS, AAMAS), and holds editorial appointments with leading journals, including the ACM Journal on Autonomous Transportation Systems, IEEE Transactions on Automation Science and Engineering, Journal of Scheduling, and Journal of Heuristics. In terms of teaching, he has taught a wide range of undergraduate and graduate courses, including AI Planning and Decision Making, Design and Analysis of Algorithms, Combinatorial Graph Algorithms, Computational Thinking, Decision Analytics and Optimization, Advanced Topics in Intelligent Systems, and Enterprise Analytics for Decision Support. He is also the co-author of the textbook “Business Analytics for Decision Making”, published by CRC Press in 2016. Twice a recipient of Singapore government scholarship from the Infocomm Development Authority (IDA), Prof Lau obtained his Doctorate of Engineering degree in Computer Science from the Tokyo Institute of Technology (Japan), and BSc and MSc degrees in Computer Science from the University of Minnesota (Minneapolis, USA).",
     weblink: "http://www.mysmu.edu/faculty/hclau/",
+  },
+  {
+    name: "Rosa So",
+    surname: "So",
+    designation: "Adjunct Assistant Professor; Division Head, Healthcare and Medtech Division",
+    affiliation: "National University of Singapore; Institute for Infocomm Research (I²R), A*STAR",
+    photo: rosaImg,
+    bio: "Dr Rosa So is an Adjunct Assistant Professor in the Department of Biomedical Engineering at the National University of Singapore (NUS), and Division Head of the Healthcare and Medtech Division at the Institute for Infocomm Research (I²R), A*STAR. She holds a Ph.D. in Biomedical Engineering from Duke University and a B.Sc. in Biomedical Engineering from Johns Hopkins University. Her research interests include brain–machine interfaces, brain stimulation and neural interfaces. She is a member of IEEE and serves on the executive committee of the IEEE Engineering in Medicine and Biology Society (EMBS) Singapore chapter.",
+    weblink: "https://cde.nus.edu.sg/bme/staff/adj-asst-prof-rosa-so-qi-yue/",
   },
   {
     name: "Tai E Shyong",

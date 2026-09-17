@@ -61,12 +61,7 @@ const days: DayProgram[] = [
         tracks: [{ type: "panel", title: "Panel 1: Agentic AI and Autonomous Systems", moderator: "Thorsten Koch" }],
       },
       { time: "12:30–13:30", tracks: [{ type: "lunch", title: "Lunch" }] },
-      {
-        time: "13:30–14:30",
-        tracks: [
-          { venue: "Auditorium 1", type: "panel", title: "Panel 2: Quantum × AI for Healthcare & Life Sciences", moderator: "Patrick Chia" },
-        ],
-      },
+      { time: "13:30–14:00", tracks: [{ type: "showcase", title: "Showcase 2", speaker: "Academia Sinica" }] },
       {
         time: "13:30–15:00",
         tracks: [
@@ -77,7 +72,12 @@ const days: DayProgram[] = [
           { venue: "SR4", type: "invited", title: "Quantum Agents for Sequence Prediction", speaker: "Jayne Thompson" },
         ],
       },
-      { time: "14:30–15:00", tracks: [{ type: "showcase", title: "Showcase 2", speaker: "Academia Sinica" }] },
+      {
+        time: "14:00–15:00",
+        tracks: [
+          { venue: "Auditorium 1", type: "panel", title: "Panel 2: Quantum × AI for Healthcare & Life Sciences", moderator: "Patrick Chia" },
+        ],
+      },
       { time: "15:00–15:30", tracks: [{ type: "break", title: "Tea Break" }] },
       { time: "15:30–16:30", tracks: [{ type: "keynote", title: "Keynote 2", speaker: "José Ignacio Latorre" }] },
       {
