@@ -15,6 +15,9 @@ import siminImg from "@/assets/IntelligenceX/simin.png";
 import patrickImg from "@/assets/IntelligenceX/patrick.jpg";
 import rosaImg from "@/assets/IntelligenceX/rosa.png";
 import andyImg from "@/assets/IntelligenceX/andy.jpg";
+import latorreImg from "@/assets/IntelligenceX/Pro.Latorre.png";
+import phillipeImg from "@/assets/IntelligenceX/phillipe.jpeg";
+import yiTianImg from "@/assets/IntelligenceX/YiTian.jpeg";
 import { ExpandableBio } from "@/components/ui/ExpandableBio";
 
 type Panel = {
@@ -84,7 +87,7 @@ const panels: Panel[] = [
     theme:
       "Preparing the next generation of researchers, professionals, and leaders through interdisciplinary education, lifelong learning, and new models of collaboration in the age of AI and quantum technologies.",
     moderatorName: "Ying Chen",
-    panelistNames: ["Andy Choi", "Xin Guo"],
+    panelistNames: ["Andy Choi", "Xin Guo", "José Ignacio Latorre"],
   },
   {
     id: "future-quantum-ai",
@@ -112,6 +115,7 @@ const moderators: Moderator[] = [
   {
     name: "Philippe Codognet",
     affiliation: "CNRS / Sorbonne University / University of Tokyo, France",
+    photo: phillipeImg,
     bio: "Prof. Philippe Codognet brings extensive experience across AI, constraint programming, optimization and quantum computing. He is Professor at Sorbonne University and Co-Director of the Japanese-French Laboratory for Informatics (JFLI).",
   },
   {
@@ -198,6 +202,15 @@ const panelists: Panelist[] = [
     bio: "Ms Mingshi Koh is Executive Director, RIE TRUST Office, and concurrently Senior Director at the National Research Foundation (NRF), Singapore, bringing a national perspective on R&D strategy, research translation and innovation ecosystems.",
   },
   {
+    name: "José Ignacio Latorre",
+    surname: "Latorre",
+    designation: "Director",
+    affiliation: "Centre for Quantum Technologies (CQT), Singapore",
+    photo: latorreImg,
+    bio: "José Ignacio Latorre is the Director of the Centre for Quantum Technologies in Singapore. He got his PhD in elementary particle physics and has worked extensively in quantum field theory, particle phenomenology, renormalization group, quantum information and artificial intelligence. His outreach activity includes the writing of three popular books, one theater play, and the production of two documentaries. He has also co-founded Qilimanjaro Quantum Tech. He also produces some nice wine.",
+    weblink: "https://www.cqt.sg/director/",
+  },
+  {
     name: "Hoong Chuin Lau",
     surname: "Lau",
     designation: "Professor of Computer Science",
@@ -260,6 +273,7 @@ const panelists: Panelist[] = [
     surname: "Thung",
     designation: "Singapore Maritime Institute (SMI)",
     affiliation: "Singapore",
+    photo: yiTianImg,
     bio: "Dr. Yi Tian Thung is with the Singapore Maritime Institute (SMI), which plays an important national role in coordinating and supporting maritime R&D and innovation in Singapore. His work includes AI, digital twins and autonomous maritime systems, bringing an important real-world application and industry perspective to the panel.",
   },
 ];
