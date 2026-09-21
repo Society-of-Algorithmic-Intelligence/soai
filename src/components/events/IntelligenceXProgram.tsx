@@ -476,7 +476,7 @@ const days: DayProgram[] = [
                 detail: "Adaptive and Reliable Reinforcement Learning: Toward Human-Centered Embodied Intelligence",
               },
               {
-                name: "Yu-Hsi Chen",
+                name: "Yu-Hsi Chen; Wei-Hsin Chen",
                 detail:
                   "Deep Learning-Based Analysis of Spontaneous Behavior Enables Early Detection of Alzheimer's Disease in Mouse Models",
               },
