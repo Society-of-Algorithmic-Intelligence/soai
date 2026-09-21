@@ -19,6 +19,8 @@ interface SpeakerEntry {
   name: string;
   /** Talk title, topic, or role, taken from the final programme. */
   detail?: string;
+  /** Optional footnote rendered under the entry, e.g. a co-sponsorship note. */
+  note?: string;
 }
 
 interface Track {
@@ -164,7 +166,11 @@ const days: DayProgram[] = [
             title: "Quantum Computing for Risk Management",
             lead: "Paolo Giudici",
             speakers: [
-              { name: "Paolo Giudici", detail: "Safe AI Risk Management for Quantum AI" },
+              {
+                name: "Paolo Giudici",
+                detail: "Safe AI Risk Management for Quantum AI",
+                note: "This event is co-sponsored by the NUS Risk Management Institute (RMI).",
+              },
               { name: "Massimiliano Ferrera", detail: "Quantum Geometric Entropic Optimization" },
               { name: "Yash Rastogi", detail: "Quantum Computing for Bayesian Risk Analysis" },
               { name: "Alessandro Bisio", detail: "Learning Quantum Transformations: Optimal Storage and Retrieval" },
@@ -284,7 +290,11 @@ const days: DayProgram[] = [
             title: "Challenges beyond Classical Optimization",
             lead: "Thorsten Koch",
             speakers: [
-              { name: "Thorsten Koch", detail: "Fast Algorithms on Fast Computers" },
+              {
+                name: "Thorsten Koch",
+                detail: "Fast Algorithms on Fast Computers",
+                note: "This event is co-sponsored by the NUS Risk Management Institute (RMI).",
+              },
               { name: "Stephanie Riedmüller", detail: "Hybrid Quantum-Classical Multi-Objective Optimization with QAOA" },
               { name: "Jianlong Lu", detail: "Beyond Hardware: Adaptive Algorithmic Control by State-Proxy Equalization" },
               { name: "Maximilian Schicker", detail: "Quantum Optimization Benchmarking Library" },
@@ -813,7 +823,13 @@ const days: DayProgram[] = [
             type: "keynote",
             title: "Keynote 5",
             lead: "Stefan Lessmann",
-            speakers: [{ name: "Xin Guo, UC Berkeley", detail: "Signature-based Time Series Statistical Analysis" }],
+            speakers: [
+              {
+                name: "Xin Guo, UC Berkeley",
+                detail: "Signature-based Time Series Statistical Analysis",
+                note: "This event is co-sponsored by the NUS Risk Management Institute (RMI).",
+              },
+            ],
           },
         ],
       },
@@ -876,6 +892,11 @@ function TrackDetails({ track, compact }: { track: Track; compact?: boolean }) {
               <li key={index} className="text-sm leading-snug text-gray-500">
                 <span className="font-medium text-gray-700">{speaker.name}</span>
                 {speaker.detail ? <> — {speaker.detail}</> : null}
+                {speaker.note && (
+                  <span className="mt-0.5 block text-xs leading-snug text-gray-500">
+                    <span className="font-semibold text-[#ee7c01]">*</span> {speaker.note}
+                  </span>
+                )}
               </li>
             ))}
           </ul>

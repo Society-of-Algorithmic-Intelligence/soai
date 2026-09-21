@@ -13,6 +13,8 @@ interface KeynoteSpeaker {
   photo: string;
   weblink?: string;
   talkTitle?: string;
+  /** Optional footnote shown under the talk title, e.g. a co-sponsorship note. */
+  sponsorNote?: string;
   abstract?: string;
   bio: string;
 }
@@ -71,6 +73,7 @@ const keynoteSpeakers: KeynoteSpeaker[] = [
     affiliation: "University of California, Berkeley, USA",
     photo: "/leadership/xinguo.jpg",
     talkTitle: "Signature-based Time Series Statistical Analysis",
+    sponsorNote: "This event is co-sponsored by the NUS Risk Management Institute (RMI).",
     abstract:
       "Signature transform has recently gained significant attention in the theory of stochastic analysis. In this talk, I will discuss how the signature transform can be exploited to address several long standing challenges in analyzing time series data, which are typically non-stationary, nonlinear and often fragmented, and for which modern deep learning models are inappropriate due to limited interpretability and in principle require large volumes of training data. In particular, we propose a simple signature-based adaptive Lasso approach that has been successfully developed and implemented in industry. This method addresses many of the challenges mentioned above while demonstrating strong potential for a wide range of applications. The talk will begin with a brief introduction to the signature transform, which has its origins in topology and has been extensively developed within the rough path theory. We will then review the key properties of the signature transform that are most relevant to our statistical methodology. The talk is intended to be self-contained.",
     bio: "Xin Guo holds the Coleman Fung Chair professorship and chairs the IEOR department at UC Berkeley. She previously held positions at Cornell (2003-2006) and IBM research (1999-2003). She is a well-recognized and influential scholar whose research spans stochastic processes, control and games, machine learning, and financial and medical time series analysis. She has served on the editorial boards of a number of leading journals, including Operations Research, Mathematics of Operations Research, SIAM Control and Optimization, and Mathematical Finance. Her work connects rigorous mathematical methods with important applications in finance, data science, biology, and healthcare. Notably, her work has been adopted by industry, with hundreds of millions of dollars in cost savings. She has also laid the mathematical foundation for some early-cancer-detection methodologies, approved by FDA.",
@@ -128,6 +131,11 @@ export default function IntelligenceX2026KeynoteSpeakers() {
                     <h2 className="text-2xl md:text-[1.7rem] font-semibold leading-snug text-gray-900">
                       {speaker.talkTitle}
                     </h2>
+                    {speaker.sponsorNote && (
+                      <p className="text-sm leading-snug text-gray-600">
+                        <span className="font-semibold text-[#ee7c01]">*</span> {speaker.sponsorNote}
+                      </p>
+                    )}
                     {speaker.abstract && (
                       <div className="space-y-2">
                         <h3 className="text-sm font-semibold uppercase tracking-wide text-[#003d7b]">
