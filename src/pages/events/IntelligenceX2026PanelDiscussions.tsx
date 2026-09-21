@@ -39,6 +39,8 @@ type Moderator = {
   affiliation: string;
   photo?: string;
   bio?: string;
+  /** Optional footnote, e.g. a co-sponsorship note. */
+  note?: string;
 };
 
 type Panelist = {
@@ -50,6 +52,8 @@ type Panelist = {
   photo?: string;
   bio: string;
   weblink?: string;
+  /** Optional footnote, e.g. a co-sponsorship note. */
+  note?: string;
 };
 
 const panels: Panel[] = [
@@ -121,12 +125,14 @@ const moderators: Moderator[] = [
   {
     name: "Paolo Giudici",
     affiliation: "University of Pavia, Italy",
+    note: "This event is co-sponsored by the NUS Risk Management Institute (RMI).",
     photo: "/leadership/Giudici.jpg",
     bio: "Prof. Paolo Stefano Giudici is Full Professor of Statistics at the University of Pavia and Director of the SAFE-AI Laboratory. His research focuses on statistical learning, financial technologies, risk management, and safe and trustworthy AI.",
   },
   {
     name: "Thorsten Koch",
     affiliation: "Zuse Institute Berlin & TU Berlin, Germany",
+    note: "This event is co-sponsored by the NUS Risk Management Institute (RMI).",
     photo: "/leadership/Thorsten.png",
     bio: "Prof. Dr. Thorsten Koch is Professor for Software and Algorithms for Discrete Optimization at TU Berlin and heads the Applied Algorithmic Intelligence Methods and Digital Data and Information departments at the Zuse Institute Berlin (ZIB). His current work focuses on high-performance methods for large-scale structured optimization using multi-core CPUs, GPUs and quantum computing.",
   },
@@ -172,6 +178,7 @@ const panelists: Panelist[] = [
     surname: "Guo",
     designation: "Professor and Chair, Department of Industrial Engineering & Operations Research",
     affiliation: "Coleman Fung Chair in Financial Modeling, University of California, Berkeley, USA",
+    note: "This event is co-sponsored by the NUS Risk Management Institute (RMI).",
     photo: "/leadership/xinguo.jpg",
     bio: "Prof. Xin Guo, University of California, Berkeley, is Professor and Chair of the Department of Industrial Engineering & Operations Research and Coleman Fung Chair in Financial Modeling. Her research spans stochastic control and games, machine learning, risk analytics, and applications across finance, healthcare and large-scale systems.",
   },
@@ -400,6 +407,11 @@ export default function IntelligenceX2026PanelDiscussions() {
                     <div className="flex-1 space-y-2">
                       <p className="text-lg font-semibold text-gray-900">{moderator.name}</p>
                       <p className="text-sm leading-snug text-gray-600">{moderator.affiliation}</p>
+                      {moderator.note && (
+                        <p className="text-sm leading-snug text-gray-700">
+                          <span className="font-semibold text-[#ee7c01]">*</span> {moderator.note}
+                        </p>
+                      )}
                       {moderator.bio && <ExpandableBio text={moderator.bio} fadeFrom="#fff8ef" />}
                     </div>
                   </div>
@@ -437,6 +449,11 @@ export default function IntelligenceX2026PanelDiscussions() {
                           <p className="text-xs leading-snug text-gray-500">
                             {panelist.affiliation}
                           </p>
+                          {panelist.note && (
+                            <p className="text-xs leading-snug text-gray-700">
+                              <span className="font-semibold text-[#ee7c01]">*</span> {panelist.note}
+                            </p>
+                          )}
                         </div>
                       </div>
                       <ExpandableBio text={panelist.bio} fadeFrom="#f4f8ff" />
