@@ -31,7 +31,7 @@ export default function IntelligenceX2026Tutorials() {
           <section className="space-y-4 rounded-lg border border-gray-200 bg-[#f9fafb] p-6 md:p-8">
             <p className="text-gray-800 leading-relaxed text-sm md:text-base">
               As part of IntelligenceX 2026: Global Quantum × AI Frontier, we are offering a curated series of 3-hour
-              intensive hands-on tutorials (tentatively scheduled for 25 September), designed for participants who want
+              intensive hands-on tutorials (scheduled for 25 September), designed for participants who want
               to go beyond theory and build real, working systems.
             </p>
             <p className="text-gray-800 leading-relaxed text-sm md:text-base">
@@ -41,7 +41,7 @@ export default function IntelligenceX2026Tutorials() {
 
             <ol className="list-decimal pl-6 space-y-4 text-gray-800 leading-relaxed text-sm md:text-base">
               <li>
-                <span className="font-semibold text-gray-900">Quantum Computing: 3-Hour Hands-On Tutorial</span>
+                <span className="font-semibold text-gray-900">Hands-on 2: Quantum Computing (3-Hour Hands-On Tutorial)</span>
                 <span className="block mt-1 text-gray-600">From Fundamentals to Algorithms &amp; Implementation</span>
                 <span className="block mt-0.5 text-sm text-[#003d7b] font-medium">
                   Led by Vishal Bajpe — IBM Quantum, Singapore
@@ -58,7 +58,7 @@ export default function IntelligenceX2026Tutorials() {
                 </a>
               </li>
               <li>
-                <span className="font-semibold text-gray-900">AI for Coding: 3-Hour Hands-On Tutorial</span>
+                <span className="font-semibold text-gray-900">Hands-on 1: Agentic AI Coding (3-Hour Hands-On Tutorial)</span>
                 <span className="block mt-1 text-gray-600">Build Your Own Intelligent Development Workflows</span>
                 <span className="block mt-0.5 text-sm text-[#003d7b] font-medium">
                   Led by Prof. Dr. Thorsten Koch — TU Berlin &amp; Zuse Institute Berlin, Germany

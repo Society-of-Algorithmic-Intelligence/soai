@@ -33,7 +33,7 @@ const showcases: ShowcaseProject[] = [
   {
     id: "dwave-annealing-dual-rail",
     title:
-      "Annealing and Dual-Rail Cavity Qubit quantum computers: How do advances in annealing and gate-model quantum computers affect industry?",
+      "Annealing and Dual-Rail Cavity Qubit Quantum Computers: How Do Advances in Annealing and Gate-Model Quantum Computers Affect Industry?",
     abstract:
       "The quantum computing ecosystem is rapidly evolving, with multiple modalities driving rapid advances. This talk examines the journey toward fault-tolerant gate-model quantum computers that can solve real-world problems, the roadmap to 100,000-qubit annealing systems and the integration of analog-digital quantum capabilities within annealing processors. We will explore how these advances are expanding quantum value creation across optimization, AI, and materials science, demonstrating how today's platforms are solving meaningful problems while accelerating the future of quantum computing.",
     organization: "D-Wave",
@@ -51,7 +51,7 @@ const showcases: ShowcaseProject[] = [
   {
     id: "target-trial-upper-limb-rehabilitation",
     title:
-      "A Multi-Technology, Self-Administered At-Home Upper-Limb Training Program for Post-Stroke Recovery — The TARGeT Trial",
+      "From Sensor Streams to Therapy Decisions: The AI Opportunity in Post-Stroke Recovery",
     abstract:
       "Stroke commonly causes lasting upper-limb impairment, yet the high training doses linked to recovery are hard to deliver after discharge given limited clinic capacity, therapist availability, travel, and cost. Home-based, technology-assisted rehabilitation could extend intensive therapy beyond the clinic, but its feasibility and safety in real home settings remain unproven. We evaluated TARGeT (Technology-Assisted Rehabilitation Gym for at-home Training), an unsupervised, high-dose, home-based program for stroke survivors in Singapore. In this single-centre, single-group pilot, 26 subacute and chronic participants completed six weeks of daily self-administered upper-limb training using three complementary technologies (i.e., H-Man, RehandyBot, and MyoGuide) targeting different limb segments with remote clinician monitoring. Primary outcomes were adherence and safety; secondary outcomes were clinical impact (Fugl-Meyer Assessment, FMA-UE; Action Research Arm Test, ARAT), usability (System Usability Scale), and cost relative to conventional therapy. The program proved feasible and safe, with good adherence and almost no adverse events. Participants showed significant improvements in FMA-UE and ARAT, reported favourable usability, and incurred lower costs than duration-matched conventional therapy. These findings suggest that a multi-technology, self-administered home program can deliver safe, well-tolerated, and clinically meaningful upper-limb rehabilitation while reducing the demand on therapists, thereby supporting the scalability of technology-assisted stroke care. Future work should identify who benefits most and define a cost-effective delivery model.",
     organization: "Future Health Technologies, Singapore-ETH Centre",
