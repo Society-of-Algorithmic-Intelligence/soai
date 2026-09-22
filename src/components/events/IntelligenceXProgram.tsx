@@ -150,7 +150,7 @@ const days: DayProgram[] = [
             speakers: [
               { name: "Si Min Chan, NVIDIA" },
               { name: "Masahiro Horibe, AIST G-QuAT" },
-              { name: "Dr Maggie Sou, Singapore Maritime Institute" },
+              { name: "Maggie Sou, Singapore Maritime Institute" },
             ],
             note: "Exploring autonomous AI agents that can reason, plan, collaborate, and make decisions in complex real-world environments.",
           },

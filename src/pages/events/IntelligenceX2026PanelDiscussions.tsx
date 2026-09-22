@@ -64,7 +64,7 @@ const panels: Panel[] = [
     theme:
       "Exploring autonomous AI agents that can reason, plan, collaborate, and make decisions in complex real-world environments.",
     moderatorName: "Thorsten Koch",
-    panelistNames: ["Si Min Chan", "Masahiro Horibe", "Dr Maggie Sou"],
+    panelistNames: ["Si Min Chan", "Masahiro Horibe", "Maggie Sou"],
   },
   {
     id: "healthcare-life-sciences",
@@ -276,7 +276,7 @@ const panelists: Panelist[] = [
     bio: "Jeremy Woo is Senior Technical Advisor at D-Wave, working with organisations across APAC on real-world applications of quantum annealing, particularly for optimization problems.",
   },
   {
-    name: "Dr Maggie Sou",
+    name: "Maggie Sou",
     surname: "Sou",
     designation: "Senior Manager",
     affiliation: "Singapore Maritime Institute (SMI), Singapore",
