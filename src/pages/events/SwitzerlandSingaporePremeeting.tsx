@@ -3,7 +3,7 @@ import intelligenceXBg from "@/assets/IntelligenceX/IntelligenceX_bg.jpg";
 import wilhelmImg from "@/assets/IntelligenceX/Dirk-Wilhelm_2026.jpg";
 import julianTanImg from "@/assets/IntelligenceX/Julian_Tan.png";
 import lukasHuberImg from "@/assets/IntelligenceX/Lukas Huber Portrait.jpg";
-import larryImg from "@/assets/IntelligenceX/larry.jpeg";
+import yiTianImg from "@/assets/IntelligenceX/YiTian.jpeg";
 import georgeImg from "@/assets/IntelligenceX/george.png";
 import danielImg from "@/assets/IntelligenceX/daniel.jpeg";
 import yingImg from "@/assets/IntelligenceX/ying.jpeg";
@@ -36,11 +36,11 @@ const speakers: PremeetingSpeaker[] = [
     bio: "Dirk Wilhelm is professor of Medical Physics and Dean of the ZHAW School of Engineering. He has more than 10 years of industrial experience and more than 20 years of academic experience in a variety of operational, managerial, and academic positions. During his industrial career he has developed several innovative products for chemical and biomedical analysis, e.g. Nuclear Magnetic Resonance (NMR) probes. In academia, he has continued his research with industrial partners and is involved in teaching bachelor, master and doctoral students at ZHAW and University of Zurich. He has initiated and directed the collaborative PhD program in Data Science between University of Zurich (UZH) and ZHAW. Furthermore, he initiated the collaborative PhD program in Biomedical Science and Health Innovation with ETH Zurich. Thanks to his initiative, ZHAW became a full member of the European University Alliance EELISA. He was instrumental in setting up the DIZH (Digitalization Initiative of the Canton of Zurich) Innovation Program, as chair of the Innovation Panel. He is member of the ZHAW university board and dean of one of the largest Engineering Schools of any Swiss University of Applied Sciences. Moreover, he is Head of the ZHAW Resort International (function of vice rector for international). His focus is on practice-orientated, high-quality engineering education for Swiss industry and economy. He is involved in the promotion of young talents through his work at the Swiss Academy of Sciences' STEM Commission (Fachkommission MINT). He is a full member of the Swiss Academy of Engineering Sciences (SATW) and patron of the Swiss Engineers' Day.",
   },
   {
-    name: "Prof. Dr. Lawrence Carin",
-    role: "Director of AI for Health",
-    affiliation: "A*STAR, Singapore",
-    photo: larryImg,
-    bio: "Lawrence Carin was a professor at Duke University for nearly 30 years, where he engaged in AI research and teaching. He served as the Chair of the Duke department of electrical and computer engineering, and he was the Vice President for Research at Duke for 7 years. He also founded two AI companies, each of which was ultimately acquired by a larger corporation. He recently joined A*STAR, where he is the Deputy Executive Director of two institutes: the Institute for AI and Computing and for the Bioinformatics Institute. He is also involved in several elements of A*STAR's AI transformation. He has worked with IonQ in developing AI algorithms for implementation on quantum computers.",
+    name: "Yi Tian Thung",
+    role: "Singapore Maritime Institute (SMI)",
+    affiliation: "Singapore",
+    photo: yiTianImg,
+    bio: "Dr. Yi Tian Thung is with the Singapore Maritime Institute (SMI), which plays an important national role in coordinating and supporting maritime R&D and innovation in Singapore. His work includes AI, digital twins and autonomous maritime systems, bringing an important real-world application and industry perspective to the panel.",
   },
   {
     name: "Lukas Huber",
