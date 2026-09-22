@@ -18,6 +18,7 @@ import andyImg from "@/assets/IntelligenceX/andy.jpg";
 import latorreImg from "@/assets/IntelligenceX/Pro.Latorre.png";
 import phillipeImg from "@/assets/IntelligenceX/phillipe.jpeg";
 import maggieImg from "@/assets/IntelligenceX/maggie.jpg";
+import rizwanImg from "@/assets/IntelligenceX/rizwan.png";
 import { ExpandableBio } from "@/components/ui/ExpandableBio";
 
 type Panel = {
@@ -91,7 +92,7 @@ const panels: Panel[] = [
     theme:
       "Preparing the next generation of researchers, professionals, and leaders through interdisciplinary education, lifelong learning, and new models of collaboration in the age of AI and quantum technologies.",
     moderatorName: "Ying Chen",
-    panelistNames: ["Andy Choi", "Xin Guo", "José Ignacio Latorre"],
+    panelistNames: ["Andy Choi", "Xin Guo", "Rizwan Hussain", "José Ignacio Latorre"],
   },
   {
     id: "future-quantum-ai",
@@ -216,6 +217,14 @@ const panelists: Panelist[] = [
     photo: latorreImg,
     bio: "José Ignacio Latorre is the Director of the Centre for Quantum Technologies in Singapore. He got his PhD in elementary particle physics and has worked extensively in quantum field theory, particle phenomenology, renormalization group, quantum information and artificial intelligence. His outreach activity includes the writing of three popular books, one theater play, and the production of two documentaries. He has also co-founded Qilimanjaro Quantum Tech. He also produces some nice wine.",
     weblink: "https://www.cqt.sg/director/",
+  },
+  {
+    name: "Rizwan Hussain",
+    surname: "Hussain",
+    designation: "Head of Quantum Sales - Asia Pacific & Japan",
+    affiliation: "IBM Corporation",
+    photo: rizwanImg,
+    bio: "Rizwan Hussain is the Head of Quantum Sales for IBM’s Asia Pacific & Japan business and a Distinguished Quantum Ambassador. He is responsible for evangelizing quantum within the industry and building the IBM Quantum business working with national research labs, academic institutions and industry partners. Rizwan teaches the Quantum Opportunities Sprint, a two-week online executive education program for industry leaders, at the University of Sydney. He is also a contributor to the Quantum Readiness Report by the IBM Institute for Business Value. IBM Quantum leads the world in quantum computing.\n\nOver the past thirty years, Rizwan has built a successful international career working with clients in the Americas, Europe, Asia Pacific, Middle East and Africa. He is a seasoned industry executive and thought leader in the areas of quantum computing, digital transformation, smarter cities and social welfare delivery. His depth of industry experience has seen him advise elected officials and city leaders on strategy development and project implementation as well as partner with private companies to deliver associated services. He has been part of the Corporate Service Corps and Smarter Cities Challenge programs at IBM.\n\nRizwan has an MBA in International Business from Thunderbird in Arizona, USA and has also received leadership education from Harvard Business School, USA.",
   },
   {
     name: "Hoong Chuin Lau",

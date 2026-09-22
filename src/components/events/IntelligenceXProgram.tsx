@@ -708,6 +708,7 @@ const days: DayProgram[] = [
             speakers: [
               { name: "Andy Choi, IMDA" },
               { name: "Xin Guo, UC Berkeley" },
+              { name: "Rizwan Hussain, IBM" },
               { name: "José Ignacio Latorre, CQT" },
             ],
           },
