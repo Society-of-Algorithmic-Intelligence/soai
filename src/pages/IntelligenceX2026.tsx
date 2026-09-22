@@ -40,6 +40,7 @@ const sectionLinks = [
   { id: "overview", label: "Overview" },
   { id: "invited-session", label: "Call for Invited Session" },
   { id: "contributed-talks", label: "Call for Contributed Talks" },
+  { id: "call-for-papers", label: "Call for Papers" },
   { id: "travel-support", label: "Travel Support" },
   { id: "premeeting", label: "Switzerland–Singapore Pre-meeting" },
   { id: "conference-highlights", label: "Conference Highlights" },
@@ -249,6 +250,12 @@ export default function IntelligenceX2026() {
                 >
                   Showcase
                 </Link>
+                <Link
+                  to="/events/intelligencex-2026/call-for-papers"
+                  className="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-[#003d7b]/10 hover:text-[#003d7b]"
+                >
+                  Call for Papers
+                </Link>
               </div>
             </div>
           </details>
@@ -304,6 +311,12 @@ export default function IntelligenceX2026() {
                   className="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-[#003d7b]/10 hover:text-[#003d7b]"
                 >
                   Showcase
+                </Link>
+                <Link
+                  to="/events/intelligencex-2026/call-for-papers"
+                  className="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-[#003d7b]/10 hover:text-[#003d7b]"
+                >
+                  Call for Papers
                 </Link>
               </div>
             </aside>
@@ -581,6 +594,36 @@ export default function IntelligenceX2026() {
                   Download Call (PDF)
                 </a>
               </div>
+            </div>
+          </section>
+
+          {/* Call for Papers — Statistics Special Issue */}
+          <section id="call-for-papers" className="scroll-mt-24 space-y-4">
+            <h2 className="text-2xl font-semibold text-gray-900">Call for Papers</h2>
+            <div className="rounded-xl border border-[#003d7b]/20 bg-[#f0f6ff] px-6 py-5 space-y-3">
+              <p className="text-base font-semibold text-[#003d7b]">
+                Statistics Special Issue on Artificial Intelligence &amp; Quantum Computing:
+                Statistical Methods, Theory, and Applications
+              </p>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                In collaboration with IntelligenceX 2026, the journal{" "}
+                <span className="font-medium">Statistics</span> invites methodological, theoretical,
+                and application-oriented submissions at the intersection of AI, quantum computing,
+                and statistics. Open to all researchers — conference authors are invited to submit
+                substantially extended work.
+              </p>
+              <p className="text-sm text-gray-700">
+                <span className="font-semibold">Submission deadline:</span> 31 March 2027
+              </p>
+              <Link
+                to="/events/intelligencex-2026/call-for-papers"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#003d7b] hover:underline"
+              >
+                View the call for papers &amp; submission details
+                <svg aria-hidden="true" viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
           </section>
 
