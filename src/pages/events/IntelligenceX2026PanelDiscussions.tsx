@@ -17,7 +17,7 @@ import rosaImg from "@/assets/IntelligenceX/rosa.png";
 import andyImg from "@/assets/IntelligenceX/andy.jpg";
 import latorreImg from "@/assets/IntelligenceX/Pro.Latorre.png";
 import phillipeImg from "@/assets/IntelligenceX/phillipe.jpeg";
-import yiTianImg from "@/assets/IntelligenceX/YiTian.jpeg";
+import maggieImg from "@/assets/IntelligenceX/maggie.jpg";
 import { ExpandableBio } from "@/components/ui/ExpandableBio";
 
 type Panel = {
@@ -64,7 +64,7 @@ const panels: Panel[] = [
     theme:
       "Exploring autonomous AI agents that can reason, plan, collaborate, and make decisions in complex real-world environments.",
     moderatorName: "Thorsten Koch",
-    panelistNames: ["Si Min Chan", "Masahiro Horibe", "Yi Tian Thung"],
+    panelistNames: ["Si Min Chan", "Masahiro Horibe", "Dr Maggie Sou"],
   },
   {
     id: "healthcare-life-sciences",
@@ -276,12 +276,12 @@ const panelists: Panelist[] = [
     bio: "Jeremy Woo is Senior Technical Advisor at D-Wave, working with organisations across APAC on real-world applications of quantum annealing, particularly for optimization problems.",
   },
   {
-    name: "Yi Tian Thung",
-    surname: "Thung",
-    designation: "Singapore Maritime Institute (SMI)",
-    affiliation: "Singapore",
-    photo: yiTianImg,
-    bio: "Dr. Yi Tian Thung is with the Singapore Maritime Institute (SMI), which plays an important national role in coordinating and supporting maritime R&D and innovation in Singapore. His work includes AI, digital twins and autonomous maritime systems, bringing an important real-world application and industry perspective to the panel.",
+    name: "Dr Maggie Sou",
+    surname: "Sou",
+    designation: "Senior Manager",
+    affiliation: "Singapore Maritime Institute (SMI), Singapore",
+    photo: maggieImg,
+    bio: "Dr Maggie Sou is a Senior Manager (R&D) at the Singapore Maritime Institute (SMI), where she drives strategic R&D initiatives in maritime innovation, artificial intelligence (AI), and emerging technologies. She works at the intersection of research, industry and policy, advancing collaborations and translating research into impactful solutions that strengthen Singapore’s maritime innovation ecosystem and future capabilities.",
   },
 ];
 
