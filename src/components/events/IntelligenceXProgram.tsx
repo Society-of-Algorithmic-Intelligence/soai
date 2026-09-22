@@ -276,7 +276,10 @@ const days: DayProgram[] = [
             title: "Keynote 2",
             lead: "Nikola Pascher",
             speakers: [
-              { name: "José Ignacio Latorre, Director, Centre for Quantum Technologies", detail: "Factorization and Quantum" },
+              {
+                name: "José Ignacio Latorre, Director, Centre for Quantum Technologies",
+                detail: "Classification and Quantum",
+              },
             ],
           },
         ],

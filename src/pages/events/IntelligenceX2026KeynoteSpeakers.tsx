@@ -38,9 +38,7 @@ const keynoteSpeakers: KeynoteSpeaker[] = [
     affiliation: "Centre for Quantum Technologies (CQT), Singapore",
     photo: latorreImg,
     weblink: "https://www.cqt.sg/director/",
-    talkTitle: "Factorization and Quantum",
-    abstract:
-      "A novel idea for factorization using a quantum computer is presented. The aim is to address factorization from an angle, different from modular arithmetics, related to quadratic Gauss sums.",
+    talkTitle: "Classification and Quantum",
     bio: "José Ignacio Latorre is the Director of the Centre for Quantum Technologies in Singapore. He got his PhD in elementary particle physics and has worked extensively in quantum field theory, particle phenomenology, renormalization group, quantum information and artificial intelligence. His outreach activity includes the writing of three popular books, one theater play, and the production of two documentaries. He has also co-founded Qilimanjaro Quantum Tech. He also produces some nice wine.",
   },
   {
