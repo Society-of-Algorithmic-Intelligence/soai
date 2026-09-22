@@ -171,7 +171,7 @@ const days: DayProgram[] = [
                 detail: "Safe AI Risk Management for Quantum AI",
                 note: "This event is co-sponsored by the NUS Risk Management Institute (RMI).",
               },
-              { name: "Massimiliano Ferrera", detail: "Quantum Geometric Entropic Optimization" },
+              { name: "Osamu Takahashi", detail: "A Matrix Pencil Soft Quantum Kernel for Employee-Retention Analytics" },
               { name: "Yash Rastogi", detail: "Quantum Computing for Bayesian Risk Analysis" },
               { name: "Alessandro Bisio", detail: "Learning Quantum Transformations: Optimal Storage and Retrieval" },
             ],
