@@ -305,6 +305,7 @@ const panelists: Panelist[] = [
     surname: "Teichmann",
     designation: "Professor, Department of Mathematics",
     affiliation: "ETH Zurich, Switzerland",
+    photo: "/leadership/Teichmann.jpg",
     bio: "Josef Teichmann is Professor of Mathematics at ETH Zurich and organises the Mathematical Foundation of Quantum Computing invited session at IntelligenceX 2026.",
   },
 ];
