@@ -74,7 +74,7 @@ const panels: Panel[] = [
     theme:
       "Transforming healthcare through AI and quantum-enabled advances in diagnosis, drug discovery, precision medicine, clinical decision support, and healthcare operations.",
     moderatorName: "Patrick Chia",
-    panelistNames: ["Mingshi Koh", "Rosa So", "Tai E Shyong", "Toh Han Chong"],
+    panelistNames: ["Thorsten Koch", "Mingshi Koh", "Rosa So", "Tai E Shyong", "Toh Han Chong"],
   },
   {
     id: "finance-risk",
@@ -92,7 +92,7 @@ const panels: Panel[] = [
     theme:
       "Preparing the next generation of researchers, professionals, and leaders through interdisciplinary education, lifelong learning, and new models of collaboration in the age of AI and quantum technologies.",
     moderatorName: "Ying Chen",
-    panelistNames: ["Andy Choi", "Xin Guo", "Rizwan Hussain", "José Ignacio Latorre"],
+    panelistNames: ["Andy Choi", "Xin Guo", "Rizwan Hussain", "José Ignacio Latorre", "Josef Teichmann"],
   },
   {
     id: "future-quantum-ai",
@@ -291,6 +291,21 @@ const panelists: Panelist[] = [
     affiliation: "Singapore Maritime Institute (SMI), Singapore",
     photo: maggieImg,
     bio: "Dr Maggie Sou is a Senior Manager (R&D) at the Singapore Maritime Institute (SMI), where she drives strategic R&D initiatives in maritime innovation, artificial intelligence (AI), and emerging technologies. She works at the intersection of research, industry and policy, advancing collaborations and translating research into impactful solutions that strengthen Singapore’s maritime innovation ecosystem and future capabilities.",
+  },
+  {
+    name: "Thorsten Koch",
+    surname: "Koch",
+    designation: "Professor for Software and Algorithms for Discrete Optimization",
+    affiliation: "Zuse Institute Berlin & TU Berlin, Germany",
+    photo: "/leadership/Thorsten.png",
+    bio: "Prof. Dr. Thorsten Koch is Professor for Software and Algorithms for Discrete Optimization at TU Berlin and heads the Applied Algorithmic Intelligence Methods and Digital Data and Information departments at the Zuse Institute Berlin (ZIB). His current work focuses on high-performance methods for large-scale structured optimization using multi-core CPUs, GPUs and quantum computing.",
+  },
+  {
+    name: "Josef Teichmann",
+    surname: "Teichmann",
+    designation: "Professor, Department of Mathematics",
+    affiliation: "ETH Zurich, Switzerland",
+    bio: "Josef Teichmann is Professor of Mathematics at ETH Zurich and organises the Mathematical Foundation of Quantum Computing invited session at IntelligenceX 2026.",
   },
 ];
 

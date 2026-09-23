@@ -115,7 +115,7 @@ const days: DayProgram[] = [
             venue: "Auditorium 1",
             type: "keynote",
             title: "Keynote 1",
-            lead: "Ying Chen",
+            lead: "Stefan Lessmann",
             speakers: [
               { name: "Stefan Woerner, IBM Research Switzerland", detail: "Towards Practical Quantum Advantage" },
             ],
@@ -258,6 +258,7 @@ const days: DayProgram[] = [
             title: "Panel 2: Quantum × AI for Healthcare and Life Sciences",
             lead: "Patrick Chia",
             speakers: [
+              { name: "Thorsten Koch, TU Berlin / ZIB" },
               { name: "Mingshi Koh, NRF" },
               { name: "Rosa So, A*STAR/NUS" },
               { name: "Tai E Shyong, NUHS/PRECISE/NUS" },
@@ -710,6 +711,7 @@ const days: DayProgram[] = [
               { name: "Xin Guo, UC Berkeley" },
               { name: "Rizwan Hussain, IBM" },
               { name: "José Ignacio Latorre, CQT" },
+              { name: "Josef Teichmann, ETH Zurich" },
             ],
           },
         ],
