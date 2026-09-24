@@ -632,6 +632,7 @@ const days: DayProgram[] = [
               { name: "Kenjiro Terada", detail: "Quantum Algorithm for Structural Vibration Analysis" },
               { name: "Frédéric Barbaresco", detail: "Quantum Computing for Radar Engineering" },
               { name: "Eloi Gravot", detail: "Quantum Annealing for Optimal Monitoring Placement on Transmission Grids" },
+              { name: "Richard Hua (CNRS@CREATE, Singapore)", detail: "Multi-drone route planning" },
             ],
           },
           {
