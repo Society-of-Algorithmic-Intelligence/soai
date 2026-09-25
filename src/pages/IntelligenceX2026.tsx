@@ -704,6 +704,9 @@ export default function IntelligenceX2026() {
                 <Link to="/events/intelligencex-2026/tutorials" className="text-[#003d7b] font-medium hover:underline">
                   Hands-on tutorials: Agentic Coding (Prof. Dr. Thorsten Koch, TU Berlin &amp; ZIB) &amp; Quantum Computing (Vishal Bajpe, IBM Quantum) — Limited Seats!
                 </Link>
+                <span className="mt-1 block text-xs text-gray-600">
+                  <span className="font-semibold text-[#ee7c01]">*</span> The Agentic AI Coding tutorial (Hands-on 1) is co-sponsored by the NUS Risk Management Institute (RMI).
+                </span>
               </li>
               <li>
                 Panel discussions and roundtables fostering dialogue among academia, industry, and policymakers
@@ -777,10 +780,16 @@ export default function IntelligenceX2026() {
               <ul className="grid gap-1.5 text-sm text-gray-700 sm:grid-cols-2">
                 <li>Agentic AI and Autonomous Systems</li>
                 <li>Quantum × AI for Healthcare and Life Sciences</li>
-                <li>Quantum × AI for Finance and Risk</li>
+                <li>
+                  Quantum × AI for Finance and Risk
+                  <span className="ml-1 font-semibold text-[#ee7c01]" aria-hidden="true">*</span>
+                </li>
                 <li>Research, Education, and Talent for the Intelligence Era</li>
                 <li>The Future of Quantum × AI</li>
               </ul>
+              <p className="text-xs leading-snug text-gray-600">
+                <span className="font-semibold text-[#ee7c01]">*</span> Panel 3: Quantum × AI for Finance and Risk is co-sponsored by the NUS Risk Management Institute (RMI).
+              </p>
               <Link
                 to="/events/intelligencex-2026/panel-discussions"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#003d7b] hover:underline"

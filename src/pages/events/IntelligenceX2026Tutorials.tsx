@@ -67,6 +67,9 @@ export default function IntelligenceX2026Tutorials() {
                   This tutorial focuses on using AI coding agents for code generation, debugging, and optimization,
                   enabling you to leverage AI as a coding co-pilot to significantly improve productivity and code quality.
                 </span>
+                <span className="block mt-1 text-sm text-gray-700">
+                  <span className="font-semibold text-[#ee7c01]">*</span> This event is co-sponsored by the NUS Risk Management Institute (RMI).
+                </span>
                 <a
                   href="#thorsten-agentic-coding-post"
                   className="mt-2 inline-flex text-sm font-semibold text-[#003d7b] hover:underline"
@@ -131,6 +134,9 @@ export default function IntelligenceX2026Tutorials() {
                 <p className="text-gray-700 text-sm md:text-base">
                   Led by <span className="font-semibold">Prof. Dr. Thorsten Koch</span> (TU Berlin &amp; Zuse Institute
                   Berlin)
+                </p>
+                <p className="text-sm leading-snug text-gray-600">
+                  <span className="font-semibold text-[#ee7c01]">*</span> This event is co-sponsored by the NUS Risk Management Institute (RMI).
                 </p>
                 <p className="text-gray-800 leading-relaxed text-sm md:text-base">
                   This intensive tutorial introduces participants to agentic coding, where software agents autonomously

@@ -33,6 +33,8 @@ type Panel = {
   panelistNames: string[];
   /** Set while further panelists for this panel are still being confirmed. */
   additionalPanelistsPending?: boolean;
+  /** Optional footnote rendered in the panel header, e.g. a co-sponsorship note. */
+  note?: string;
 };
 
 type Moderator = {
@@ -84,6 +86,7 @@ const panels: Panel[] = [
       "Harnessing AI and quantum computing to advance portfolio optimization, risk management, forecasting, trading, cybersecurity, and financial decision intelligence.",
     moderatorName: "Paolo Giudici",
     panelistNames: ["Huaxing Chen", "Matthias W. Uhl", "Stefan Woerner"],
+    note: "This event is co-sponsored by the NUS Risk Management Institute (RMI).",
   },
   {
     id: "education-talent",
@@ -126,7 +129,6 @@ const moderators: Moderator[] = [
   {
     name: "Paolo Giudici",
     affiliation: "University of Pavia, Italy",
-    note: "This event is co-sponsored by the NUS Risk Management Institute (RMI).",
     photo: "/leadership/Giudici.jpg",
     bio: "Prof. Paolo Stefano Giudici is Full Professor of Statistics at the University of Pavia and Director of the SAFE-AI Laboratory. His research focuses on statistical learning, financial technologies, risk management, and safe and trustworthy AI.",
   },
@@ -409,6 +411,11 @@ export default function IntelligenceX2026PanelDiscussions() {
                 </div>
                 <h2 className="mt-3 text-xl font-bold md:text-2xl">{panel.title}</h2>
                 <p className="mt-2 max-w-3xl text-sm leading-relaxed text-white/85">{panel.theme}</p>
+                {panel.note && (
+                  <p className="mt-2 text-sm leading-snug text-[#ffcf8c]">
+                    <span className="font-semibold">*</span> {panel.note}
+                  </p>
+                )}
               </header>
 
               {moderator && (

@@ -32,7 +32,10 @@ interface Track {
   lead?: string;
   /** Presenters and panellists together with their talk titles, topics, or roles. */
   speakers?: SpeakerEntry[];
+  /** Optional footnote rendered below the entry, e.g. session details. */
   note?: string;
+  /** Optional footnote rendered below the entry, e.g. a co-sponsorship note. */
+  sponsorNote?: string;
 }
 
 interface Slot {
@@ -567,6 +570,7 @@ const days: DayProgram[] = [
               { name: "Matthias W. Uhl, UBS" },
               { name: "Stefan Woerner, IBM Research Europe – Zurich" },
             ],
+            sponsorNote: "This event is co-sponsored by the NUS Risk Management Institute (RMI).",
           },
         ],
       },
@@ -574,7 +578,14 @@ const days: DayProgram[] = [
       {
         time: "13:30–15:00",
         tracks: [
-          { venue: "SR12", type: "hands-on", title: "Hands-on 1: Agentic AI Coding", lead: "Thorsten Koch", note: "Part I" },
+          {
+            venue: "SR12",
+            type: "hands-on",
+            title: "Hands-on 1: Agentic AI Coding",
+            lead: "Thorsten Koch",
+            note: "Part I",
+            sponsorNote: "This event is co-sponsored by the NUS Risk Management Institute (RMI).",
+          },
           { venue: "SR1", type: "hands-on", title: "Hands-on 2: Quantum Computing", lead: "Vishal Bajpe", note: "Part I" },
         ],
       },
@@ -582,7 +593,14 @@ const days: DayProgram[] = [
       {
         time: "15:30–17:00",
         tracks: [
-          { venue: "SR12", type: "hands-on", title: "Hands-on 1: Agentic AI Coding", lead: "Thorsten Koch", note: "Part II" },
+          {
+            venue: "SR12",
+            type: "hands-on",
+            title: "Hands-on 1: Agentic AI Coding",
+            lead: "Thorsten Koch",
+            note: "Part II",
+            sponsorNote: "This event is co-sponsored by the NUS Risk Management Institute (RMI).",
+          },
           { venue: "SR1", type: "hands-on", title: "Hands-on 2: Quantum Computing", lead: "Vishal Bajpe", note: "Part II" },
         ],
       },
@@ -909,6 +927,11 @@ function TrackDetails({ track, compact }: { track: Track; compact?: boolean }) {
           </ul>
         ))}
       {track.note && <p className="text-sm leading-snug text-gray-500">{track.note}</p>}
+      {track.sponsorNote && (
+        <p className="mt-0.5 text-xs leading-snug text-gray-500">
+          <span className="font-semibold text-[#ee7c01]">*</span> {track.sponsorNote}
+        </p>
+      )}
     </div>
   );
 }
