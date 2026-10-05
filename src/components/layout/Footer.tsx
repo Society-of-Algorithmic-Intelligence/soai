@@ -100,6 +100,7 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4">Resources</h3>
             <nav className="space-y-3">
               <Link to="/events" className="block text-sm text-gray-300 hover:text-white transition-colors">Events</Link>
+              <Link to="/training" className="block text-sm text-gray-300 hover:text-white transition-colors">Training</Link>
               <Link to="/news" className="block text-sm text-gray-300 hover:text-white transition-colors">News</Link>
             </nav>
           </div>

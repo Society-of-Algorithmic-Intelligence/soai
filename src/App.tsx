@@ -28,6 +28,9 @@ import IntelligenceX2026ExecutiveTrack from './pages/events/IntelligenceX2026Exe
 import IntelligenceX2026PanelDiscussions from './pages/events/IntelligenceX2026PanelDiscussions';
 import IntelligenceX2026KeynoteSpeakers from './pages/events/IntelligenceX2026KeynoteSpeakers';
 import IntelligenceX2026CallForPapers from './pages/events/IntelligenceX2026CallForPapers';
+import TrainingProgrammes from './pages/training/TrainingProgrammes';
+import QuantumTechnologyBusinessLeaders from './pages/training/QuantumTechnologyBusinessLeaders';
+import AgenticCoding from './pages/training/AgenticCoding';
 import PaymentSuccess from './pages/PaymentSuccess';
 
 function App() {
@@ -45,6 +48,9 @@ function App() {
           <Route path="membership/register" element={<MembershipRegister />} />
           <Route path="membership/success" element={<MembershipSuccess />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="training" element={<TrainingProgrammes />} />
+          <Route path="training/quantum-technology-for-business-leaders" element={<QuantumTechnologyBusinessLeaders />} />
+          <Route path="training/agentic-coding" element={<AgenticCoding />} />
           <Route path="events" element={<Events />} />
           <Route path="events/intelligencex-2026" element={<IntelligenceX2026 />} />
           <Route path="events/intelligencex-2026/register" element={<IntelligenceX2026Registration />} />

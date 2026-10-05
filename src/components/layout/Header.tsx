@@ -124,6 +124,16 @@ export default function Header() {
               Events
             </Link>
 
+            {/* Training */}
+            <Link
+              to="/training"
+              className={`text-sm font-medium transition-colors hover:text-[#003d7b] ${
+                isActive('/training') ? 'text-[#003d7b] border-b-2 border-[#003d7b] pb-1' : 'text-gray-700'
+              }`}
+            >
+              Training
+            </Link>
+
             {/* Membership */}
             <Link
               to="/membership"
@@ -232,6 +242,15 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Events
+              </Link>
+              <Link
+                to="/training"
+                className={`text-sm font-medium transition-colors hover:text-[#003d7b] px-2 py-1 ${
+                  isActive('/training') ? 'text-[#003d7b]' : 'text-gray-700'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Training
               </Link>
               <Link
                 to="/membership"
