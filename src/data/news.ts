@@ -9,6 +9,26 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: "nvidia-cuopt-mpdlp-100-million-variables",
+    title:
+      "Scaling Decision Optimization to 100 Million Variables and Beyond with mPDLP in NVIDIA cuOpt",
+    date: "2026-10-07",
+    source: "NVIDIA Technical Blog",
+    summary:
+      "NVIDIA introduced mPDLP, a new multi-GPU Primal-Dual Hybrid Gradient solver for linear programming in NVIDIA cuOpt that distributes large-scale LP problems across NVLink-connected GPUs, extending decision optimization to 100 million variables and beyond. Benchmarks across more than 100 LP instances show up to 11.4× faster iterations than single-GPU PDLP and up to 6× lower peak memory usage per GPU, while partners Kinaxis and PSR report 3.3× and 5×+ speedups on 135-million- and 185-million-variable supply-chain and energy-planning models.",
+    link: "https://developer.nvidia.com/blog/scaling-decision-optimization-to-100-million-variables-and-beyond-with-mpdlp-in-nvidia-cuopt/",
+  },
+  {
+    id: "intelligencex-2026-concludes-successfully-in-singapore",
+    title:
+      "IntelligenceX 2026: The Global Quantum × AI Frontier Concludes Successfully in Singapore",
+    date: "2026-09-29",
+    source: "Society of Algorithmic Intelligence",
+    summary:
+      "IntelligenceX 2026, jointly organised by the National University of Singapore (NUS) and the Society of Algorithmic Intelligence (SoAI), concluded successfully in Singapore. Held at University Town, NUS, from 24 to 26 September 2026 with a by-invitation Executive Programme on 28 September, the conference was opened by Guest of Honour Mdm Rahayu Mahzam, Minister of State at the Ministry of Digital Development and Information and the Ministry of Health. The programme featured five keynotes, five panel discussions, invited and contributed talks, hands-on tutorials on agentic coding and quantum computing, industry showcases, and the AI Algorithmic Trading Competition award ceremony. SoAI thanks all speakers, panellists, sponsors, partners, and participants for making the event a success.",
+    link: "https://www.soc-ai.org/events/intelligencex-2026",
+  },
+  {
     id: "qubowl-mittelmann-benchmark-state-of-the-art",
     title: "QuBowl Solver Leads Mittelmann Benchmark—Major Performance Milestone",
     date: "2026-04-19",
