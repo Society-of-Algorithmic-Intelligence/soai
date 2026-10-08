@@ -1,3 +1,8 @@
+export type NewsLink = {
+  label: string;
+  url: string;
+};
+
 export type NewsItem = {
   id: string;
   title: string;
@@ -5,6 +10,8 @@ export type NewsItem = {
   source?: string;
   summary?: string;
   link?: string;
+  /** Additional external links, e.g. official reports or coverage. */
+  links?: NewsLink[];
 };
 
 export const newsItems: NewsItem[] = [
@@ -27,6 +34,16 @@ export const newsItems: NewsItem[] = [
     summary:
       "IntelligenceX 2026, jointly organised by the National University of Singapore (NUS) and the Society of Algorithmic Intelligence (SoAI), concluded successfully in Singapore. Held at University Town, NUS, from 24 to 26 September 2026 with a by-invitation Executive Programme on 28 September, the conference was opened by Guest of Honour Mdm Rahayu Mahzam, Minister of State at the Ministry of Digital Development and Information and the Ministry of Health. The programme featured five keynotes, five panel discussions, invited and contributed talks, hands-on tutorials on agentic coding and quantum computing, industry showcases, and the AI Algorithmic Trading Competition award ceremony. SoAI thanks all speakers, panellists, sponsors, partners, and participants for making the event a success.",
     link: "https://www.soc-ai.org/events/intelligencex-2026",
+    links: [
+      {
+        label: "NUS News: When Quantum Meets AI",
+        url: "https://news.nus.edu.sg/when-quantum-meets-ai-nus-brings-together-international-experts-to-turn-frontier-technologies-into-real-world-solutions/",
+      },
+      {
+        label: "MDDI: Opening Address by MOS Rahayu Mahzam",
+        url: "https://www.mddi.gov.sg/newsroom/opening-address-by-mos-rahayu-mahzam-at-intelligencex-2026--the-global-quantumxai-frontier/",
+      },
+    ],
   },
   {
     id: "qubowl-mittelmann-benchmark-state-of-the-art",

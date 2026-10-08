@@ -132,6 +132,21 @@ export default function Home() {
                           {n.link && (
                             <a href={n.link} className="text-sm text-[#ee7c01] hover:underline mt-3 inline-block">Read more</a>
                           )}
+                          {n.links && n.links.length > 0 && (
+                            <div className="mt-3 space-y-1 border-t border-gray-100 pt-3">
+                              {n.links.map((l) => (
+                                <a
+                                  key={l.url}
+                                  href={l.url}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="block text-sm text-[#003d7b] hover:underline"
+                                >
+                                  {l.label}
+                                </a>
+                              ))}
+                            </div>
+                          )}
                         </CardContent>
                       )}
                     </Card>

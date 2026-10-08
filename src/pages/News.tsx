@@ -29,6 +29,21 @@ export default function News() {
                   {n.link && (
                     <a href={n.link} className="text-[#ee7c01] hover:underline" target="_blank" rel="noreferrer">Read more</a>
                   )}
+                  {n.links && n.links.length > 0 && (
+                    <div className="mt-3 space-y-1 border-t border-gray-100 pt-3">
+                      {n.links.map((l) => (
+                        <a
+                          key={l.url}
+                          href={l.url}
+                          className="block text-[#003d7b] hover:underline"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {l.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </CardContent>
               )}
             </Card>
