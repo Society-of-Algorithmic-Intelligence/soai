@@ -329,6 +329,19 @@ export default function IntelligenceX2026() {
 
             <div className="min-w-0 space-y-10">
 
+          {/* Conference photo galleries by day */}
+          <div className="space-y-5">
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-semibold uppercase tracking-wide text-[#003d7b]">
+                Conference photos · 24–26 September 2026
+              </span>
+              <span className="h-px flex-1 bg-gray-200" aria-hidden="true" />
+            </div>
+            {conferenceDayGalleries.map(({ day, title, photos }) => (
+              <EventPhotoBand key={day} title={title} photos={photos} />
+            ))}
+          </div>
+
           {/* Partner logos – scrolling marquee */}
           <section className="pb-2">
             <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
@@ -713,19 +726,6 @@ export default function IntelligenceX2026() {
               </li>
 
             </ul>
-
-            {/* Conference photo galleries by day */}
-            <div className="space-y-5 pt-2">
-              <div className="flex items-center gap-3">
-                <span className="text-xs font-semibold uppercase tracking-wide text-[#003d7b]">
-                  Conference photos · 24–26 September 2026
-                </span>
-                <span className="h-px flex-1 bg-gray-200" aria-hidden="true" />
-              </div>
-              {conferenceDayGalleries.map(({ day, title, photos }) => (
-                <EventPhotoBand key={day} title={title} photos={photos} />
-              ))}
-            </div>
           </section>
 
           {/* Keynote Speakers */}
