@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { GraduationCap, Cpu, Wrench, Scale } from "lucide-react";
+import { WorkshopMosaic } from "@/components/training/WorkshopMosaic";
 
 /**
  * Confirmed public SoAI contact email (used in the site footer and on the
@@ -32,6 +33,19 @@ const offerings = [
       "Licensing of the associated methodology and technology for organisations. See the Intellectual Property & Licensing section below.",
   },
 ];
+
+const workshopPhotos = (() => {
+  const files = import.meta.glob("/src/assets/training/agentic-coding/*.jpg", { eager: true }) as Record<
+    string,
+    { default: string }
+  >;
+  return Object.keys(files)
+    .sort()
+    .map((key, index) => ({
+      src: files[key].default,
+      alt: `Agentic AI Coding hands-on workshop at IntelligenceX 2026 — photo ${index + 1}`,
+    }));
+})();
 
 export default function AgenticCoding() {
   return (
@@ -94,6 +108,12 @@ export default function AgenticCoding() {
                 );
               })}
             </div>
+          </section>
+
+          {/* Workshop photos */}
+          <section className="space-y-5">
+            <h2 className="text-xl font-semibold text-gray-900">From the Hands-On Workshop</h2>
+            <WorkshopMosaic photos={workshopPhotos} />
           </section>
 
           {/* Intellectual property & licensing */}
