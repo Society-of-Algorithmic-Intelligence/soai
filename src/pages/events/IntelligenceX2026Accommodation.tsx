@@ -175,11 +175,11 @@ export default function IntelligenceX2026Accommodation() {
           <section className="space-y-3 rounded-lg border border-gray-200 bg-[#f9fafb] p-6 md:p-8">
             <h2 className="text-xl font-semibold text-gray-900">Booking Window</h2>
             <p className="text-gray-800 leading-relaxed">
-              The conference accommodation booking window will close on:
+              The conference accommodation booking window closed on:
             </p>
             <p className="text-lg font-semibold text-[#003d7b]">30 August 2026, 23:59 Singapore Time</p>
             <p className="text-gray-800 leading-relaxed">
-              No new reservations will be accepted after the booking window closes.
+              The booking period has now ended and no further reservations are being accepted.
             </p>
           </section>
 
@@ -253,14 +253,12 @@ export default function IntelligenceX2026Accommodation() {
             </p>
           </section>
 
-          {/* CTA */}
-          <div className="flex justify-center pt-2">
-            <Link
-              to="/events/intelligencex-2026/accommodation/book"
-              className="inline-flex w-full items-center justify-center rounded-full bg-[#ee7c01] px-8 py-3 text-base font-semibold text-white shadow-md transition hover:bg-[#d66900] hover:shadow-lg sm:w-auto"
-            >
-              Book This Rate
-            </Link>
+          {/* Booking closed */}
+          <div className="rounded-xl border border-gray-300 bg-gray-100 px-6 py-5 text-center">
+            <p className="text-base font-semibold text-gray-600">Accommodation Booking Closed</p>
+            <p className="mt-1 text-sm text-gray-500">
+              The booking period for IntelligenceX 2026 conference accommodation has ended.
+            </p>
           </div>
 
           {/* Back link bottom */}
