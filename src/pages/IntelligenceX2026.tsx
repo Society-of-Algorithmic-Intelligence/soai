@@ -366,12 +366,9 @@ export default function IntelligenceX2026() {
 
           <section id="registration" className="scroll-mt-24 flex flex-col items-start gap-4">
             <div className="flex flex-wrap items-center gap-3">
-              <Link
-                to="/events/intelligencex-2026/register"
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-[#ee7c01] px-6 py-2.5 text-base font-semibold text-white shadow-md transition hover:bg-[#d66900] hover:shadow-lg"
-              >
-                Conference Registration
-              </Link>
+              <span className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-gray-300 bg-gray-100 px-6 py-2.5 text-base font-semibold text-gray-500">
+                Registration Closed
+              </span>
               <a
                 href="https://forms.gle/kKcYxG6PDgyvrSNk8"
                 target="_blank"

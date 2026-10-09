@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import ScrollToTop from './components/layout/ScrollToTop';
 import Home from './pages/Home';
@@ -15,7 +15,6 @@ import ComingSoon from './pages/ComingSoon';
 import MembershipRegister from './pages/MembershipRegister';
 import MembershipSuccess from './pages/MembershipSuccess';
 import IntelligenceX2026 from './pages/IntelligenceX2026';
-import IntelligenceX2026Registration from './pages/IntelligenceX2026Registration';
 import HackathonRegistration from './pages/HackathonRegistration';
 import QuantumAIAndRiskManagement from './pages/events/Quantum_AI_and_risk_management';
 import IntelligenceX2026Tutorials from './pages/events/IntelligenceX2026Tutorials';
@@ -53,7 +52,7 @@ function App() {
           <Route path="training/agentic-coding" element={<AgenticCoding />} />
           <Route path="events" element={<Events />} />
           <Route path="events/intelligencex-2026" element={<IntelligenceX2026 />} />
-          <Route path="events/intelligencex-2026/register" element={<IntelligenceX2026Registration />} />
+          <Route path="events/intelligencex-2026/register" element={<Navigate to="/events/intelligencex-2026" replace />} />
           <Route path="events/intelligencex-2026/tutorials" element={<IntelligenceX2026Tutorials />} />
           <Route path="events/intelligencex-2026/showcase" element={<IntelligenceX2026Showcase />} />
           <Route path="events/intelligencex-2026/accommodation" element={<IntelligenceX2026Accommodation />} />

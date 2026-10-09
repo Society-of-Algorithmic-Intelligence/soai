@@ -99,16 +99,8 @@ export default function IntelligenceX2026Tutorials() {
               </ul>
             </div>
 
-            <p className="text-gray-800 leading-relaxed text-sm md:text-base">
-              <span className="font-semibold">⚠️ Limited seats</span> available to ensure a high-quality learning experience.
-              Early registration is strongly recommended.
-            </p>
             <p className="text-sm text-gray-600">
-              You may indicate a tutorial preference when you{" "}
-              <Link to="/events/intelligencex-2026/register" className="font-semibold text-[#003d7b] hover:underline">
-                register
-              </Link>
-              ; preference is optional and subject to capacity (see registration form for details).
+              Registration for IntelligenceX 2026 has closed — the conference took place 24–26 September 2026.
             </p>
           </section>
 
