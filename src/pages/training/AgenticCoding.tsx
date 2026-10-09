@@ -112,7 +112,12 @@ export default function AgenticCoding() {
 
           {/* Workshop photos */}
           <section className="space-y-5">
-            <h2 className="text-xl font-semibold text-gray-900">From the Hands-On Workshop</h2>
+            <div className="space-y-1">
+              <h2 className="text-xl font-semibold text-gray-900">From the Hands-On Workshop</h2>
+              <p className="text-sm text-gray-500">
+                Hands-On 1: Agentic AI Coding · 25 September 2026 · National University of Singapore
+              </p>
+            </div>
             <WorkshopMosaic photos={workshopPhotos} />
           </section>
 

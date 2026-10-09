@@ -65,19 +65,8 @@ export function WorkshopMosaic({ photos }: WorkshopMosaicProps) {
         {tile(3, "md:col-span-4")}
         {tile(4, "md:col-span-4")}
         {tile(5, "md:col-span-4")}
-        {tile(6, "md:col-span-4")}
-        {tile(7, "col-span-2 md:col-span-4")}
-        <div className="col-span-2 row-span-2 flex flex-col justify-center gap-2 rounded-xl bg-[#002a57] px-5 py-4 md:col-span-4 md:row-span-1">
-          <span className="inline-flex w-fit items-center rounded-full bg-[#ee7c01] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
-            Hands-On 1 · 25 September 2026
-          </span>
-          <p className="text-base font-semibold leading-snug text-white">
-            Agentic AI Coding — 3-hour hands-on workshop
-          </p>
-          <p className="text-xs leading-relaxed text-white/70">
-            IntelligenceX 2026 · National University of Singapore
-          </p>
-        </div>
+        {tile(6, "md:col-span-6")}
+        {tile(7, "col-span-2 md:col-span-6")}
       </div>
 
       {active !== null && photos[active] && (
