@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import intelligenceXBg from "@/assets/IntelligenceX/IntelligenceX_bg.jpg";
+import { EventPhotoBand } from "@/components/events/EventPhotoBand";
+import { executiveTrackPhotos } from "@/data/intelligenceXPhotos";
 
 export default function IntelligenceX2026ExecutiveTrack() {
   return (
@@ -87,6 +89,12 @@ export default function IntelligenceX2026ExecutiveTrack() {
               participants exchange perspectives, explore emerging opportunities, and build partnerships that accelerate
               innovation across industry, government, and academia.
             </p>
+          </section>
+
+          {/* Photo highlights */}
+          <section className="space-y-5">
+            <h2 className="text-xl font-semibold text-gray-900">Photo Highlights</h2>
+            <EventPhotoBand title="Executive Track — 28 September 2026" photos={executiveTrackPhotos} />
           </section>
 
           {/* Discussion Themes */}

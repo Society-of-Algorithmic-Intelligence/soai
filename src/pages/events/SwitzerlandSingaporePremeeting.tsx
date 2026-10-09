@@ -9,6 +9,8 @@ import danielImg from "@/assets/IntelligenceX/daniel.jpeg";
 import yingImg from "@/assets/IntelligenceX/ying.jpeg";
 import nikolaImg from "@/assets/IntelligenceX/nikola.jpeg";
 import { ExpandableBio } from "@/components/ui/ExpandableBio";
+import { EventPhotoBand } from "@/components/events/EventPhotoBand";
+import { preMeetingPhotos } from "@/data/intelligenceXPhotos";
 
 interface PremeetingSpeaker {
   name: string;
@@ -167,6 +169,12 @@ export default function SwitzerlandSingaporePremeeting() {
               approaches to fostering innovation? How can we better bridge the gap between research and industrial
               impact?
             </p>
+          </section>
+
+          {/* Photo highlights */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold text-gray-900">Photo Highlights</h2>
+            <EventPhotoBand title="Pre-meeting — 10 September 2026" photos={preMeetingPhotos} />
           </section>
 
           {/* Programme */}

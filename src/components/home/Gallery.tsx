@@ -4,13 +4,15 @@ import { Pause, Play, X, ChevronLeft, ChevronRight } from "lucide-react";
 type GalleryProps = {
   images: Array<{ src: string; thumb?: string; alt?: string; caption?: string }>;
   speedMs?: number;
-  /** Edge fade colour: "dark" for dark backgrounds (default), "light" for white/gray backgrounds. */
-  edge?: "dark" | "light";
+  /** Edge fade colour: "dark" for dark backgrounds (default), "light" for white/gray, "navy" for the deep-navy photo band. */
+  edge?: "dark" | "light" | "navy";
   /** Pause the marquee while the pointer hovers over it. */
   pauseOnHover?: boolean;
+  /** Extra classes merged onto each tile (e.g. rings, shadows, hover effects). */
+  tileClassName?: string;
 };
 
-export default function Gallery({ images, speedMs = 30000, edge = "dark", pauseOnHover = false }: GalleryProps) {
+export default function Gallery({ images, speedMs = 30000, edge = "dark", pauseOnHover = false, tileClassName = "" }: GalleryProps) {
   const [isPaused, setIsPaused] = useState(false);
   const [hoverPaused, setHoverPaused] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -63,8 +65,16 @@ export default function Gallery({ images, speedMs = 30000, edge = "dark", pauseO
           {isPaused ? <Play className="h-4 w-4" /> : <Pause className="h-4 w-4" />}
         </button>
       </div>
-      <div className={`pointer-events-none absolute inset-y-0 left-0 w-24 ${edge === "light" ? "mask-fade-left-light" : "mask-fade-left"}`} />
-      <div className={`pointer-events-none absolute inset-y-0 right-0 w-24 ${edge === "light" ? "mask-fade-right-light" : "mask-fade-right"}`} />
+      <div
+        className={`pointer-events-none absolute inset-y-0 left-0 w-24 ${
+          edge === "light" ? "mask-fade-left-light" : edge === "navy" ? "mask-fade-left-navy" : "mask-fade-left"
+        }`}
+      />
+      <div
+        className={`pointer-events-none absolute inset-y-0 right-0 w-24 ${
+          edge === "light" ? "mask-fade-right-light" : edge === "navy" ? "mask-fade-right-navy" : "mask-fade-right"
+        }`}
+      />
 
       <div
         className="flex gap-6 marquee"
@@ -75,7 +85,7 @@ export default function Gallery({ images, speedMs = 30000, edge = "dark", pauseO
         {sequence.map((item, idx) => (
           <figure
             key={`${item.src}-${idx}`}
-            className="shrink-0 w-[280px] h-[170px] sm:w-[340px] sm:h-[200px] rounded-xl overflow-hidden border bg-white/5 backdrop-blur-sm cursor-pointer"
+            className={`shrink-0 w-[280px] h-[170px] sm:w-[340px] sm:h-[200px] rounded-xl overflow-hidden border bg-white/5 backdrop-blur-sm cursor-pointer ${tileClassName}`}
             onClick={() => openLightbox(idx)}
             role="button"
             aria-label="Open image"
@@ -102,6 +112,9 @@ export default function Gallery({ images, speedMs = 30000, edge = "dark", pauseO
           >
             <X className="h-5 w-5" />
           </button>
+          <div className="absolute top-4 left-4 inline-flex h-10 items-center rounded-full bg-white/10 px-4 text-sm font-medium text-white/90">
+            {lightboxIndex + 1} / {images.length}
+          </div>
           <button
             aria-label="Previous image"
             onClick={showPrev}

@@ -152,3 +152,10 @@
 .mask-fade-right-light {
   background: linear-gradient(270deg, rgba(255,255,255,1), rgba(255,255,255,0));
 }
+/* Deep-navy band variants (fade to #002a57) */
+.mask-fade-left-navy {
+  background: linear-gradient(90deg, #002a57, rgba(0,42,87,0));
+}
+.mask-fade-right-navy {
+  background: linear-gradient(270deg, #002a57, rgba(0,42,87,0));
+}
