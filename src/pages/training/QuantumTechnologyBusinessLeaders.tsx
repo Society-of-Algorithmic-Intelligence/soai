@@ -6,20 +6,6 @@ import { Link } from "react-router-dom";
  */
 const PROGRAMME_ENQUIRIES_EMAIL = "info@soc-ai.org";
 
-/**
- * Programme fields are intentionally marked "To be announced" — no dates,
- * fees, duration, or instructors have been confirmed yet. Replace the values
- * as details are finalised.
- */
-const programmeInformation = [
-  { label: "Format", value: "To be announced" },
-  { label: "Duration", value: "To be announced" },
-  { label: "Dates", value: "To be announced" },
-  { label: "Fees", value: "To be announced" },
-  { label: "Instructors", value: "To be announced" },
-  { label: "Certificate", value: "To be announced" },
-];
-
 export default function QuantumTechnologyBusinessLeaders() {
   return (
     <div className="min-h-screen bg-white">
@@ -60,28 +46,6 @@ export default function QuantumTechnologyBusinessLeaders() {
             <p className="text-gray-800 leading-relaxed text-sm md:text-base">
               The programme is intended for senior executives, managers, and professionals who
               make or influence technology and strategy decisions in their organisations.
-            </p>
-          </section>
-
-          {/* Programme information */}
-          <section id="programme-information" className="space-y-5">
-            <h2 className="text-xl font-semibold text-gray-900">Programme Information</h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {programmeInformation.map((item) => (
-                <div
-                  key={item.label}
-                  className="rounded-lg border border-gray-200 bg-white px-5 py-4"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-1">
-                    {item.label}
-                  </p>
-                  <p className="text-base font-semibold text-gray-900">{item.value}</p>
-                </div>
-              ))}
-            </div>
-            <p className="text-sm text-gray-500">
-              Detailed programme information is currently being finalised and will be published on
-              this page.
             </p>
           </section>
 

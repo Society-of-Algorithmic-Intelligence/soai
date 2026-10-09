@@ -107,10 +107,14 @@ export default function AgenticCoding() {
             <p className="text-gray-800 leading-relaxed text-sm md:text-base">
               The associated intellectual property is owned by the Society of Algorithmic
               Intelligence (SoAI). Public universities may, in principle, be granted royalty-free
-              use for academic and research purposes, subject to authorization by SoAI, appropriate
-              acknowledgement, and display of the SoAI logo. Such use must be identified as
-              licensed by SoAI. Licensing for other organizations and purposes will be considered
-              on a case-by-case basis.
+              use for academic and research purposes, subject to{" "}
+              <strong className="font-bold text-[#003d7b]">prior written authorization</strong>{" "}
+              by SoAI, appropriate acknowledgement, and display of the SoAI logo. Such use must be
+              identified as licensed by SoAI. Licensing for other organizations and purposes will
+              be considered on a case-by-case basis.
+            </p>
+            <p className="rounded-r-lg border-l-4 border-[#ee7c01] bg-white px-4 py-3 text-sm font-semibold text-gray-900">
+              Authorization must be granted in writing by SoAI.
             </p>
           </section>
 
