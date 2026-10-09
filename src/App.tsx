@@ -15,7 +15,6 @@ import ComingSoon from './pages/ComingSoon';
 import MembershipRegister from './pages/MembershipRegister';
 import MembershipSuccess from './pages/MembershipSuccess';
 import IntelligenceX2026 from './pages/IntelligenceX2026';
-import HackathonRegistration from './pages/HackathonRegistration';
 import QuantumAIAndRiskManagement from './pages/events/Quantum_AI_and_risk_management';
 import IntelligenceX2026Tutorials from './pages/events/IntelligenceX2026Tutorials';
 import IntelligenceX2026Showcase from './pages/events/IntelligenceX2026Showcase';
@@ -56,7 +55,7 @@ function App() {
           <Route path="events/intelligencex-2026/showcase" element={<IntelligenceX2026Showcase />} />
           <Route path="events/intelligencex-2026/accommodation" element={<IntelligenceX2026Accommodation />} />
           <Route path="events/intelligencex-2026/accommodation/book" element={<Navigate to="/events/intelligencex-2026/accommodation" replace />} />
-          <Route path="events/intelligencex-2026/hackathon-register" element={<HackathonRegistration />} />
+          <Route path="events/intelligencex-2026/hackathon-register" element={<Navigate to="/events/intelligencex-2026" replace />} />
           <Route path="events/intelligencex-2026/switzerland-singapore-premeeting" element={<SwitzerlandSingaporePremeeting />} />
           <Route path="events/intelligencex-2026/travel-support" element={<IntelligenceX2026TravelSupport />} />
           <Route path="events/intelligencex-2026/executive-track" element={<IntelligenceX2026ExecutiveTrack />} />

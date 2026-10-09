@@ -77,7 +77,7 @@ export default function IntelligenceX2026TravelSupport() {
               As there are limited financial resources available, SoAI may not be able to satisfy all
               applications made under the Travel Support Programme. SoAI reserves the sole right to
               determine the amount and type of support awarded to each applicant. All applications
-              will be reviewed by SoAI, and the results will be announced on 15 September 2026. The
+              were reviewed by SoAI, and results were announced on 15 September 2026. The
               decision of SoAI regarding the provision, amount, and type of financial support is
               final and not subject to appeal.
             </p>
@@ -91,20 +91,13 @@ export default function IntelligenceX2026TravelSupport() {
             </div>
           </section>
 
-          {/* Apply CTA */}
-          <section className="rounded-xl border border-[#003d7b]/20 bg-[#f0f6ff] px-6 py-6 space-y-4">
-            <h2 className="text-lg font-semibold text-[#003d7b]">Apply for Travel Support</h2>
-            <p className="text-sm text-gray-700">
-              Submit your application via the link below before <strong>10 September 2026</strong>.
+          {/* Applications closed */}
+          <section className="rounded-xl border border-gray-300 bg-gray-100 px-6 py-6 space-y-2">
+            <h2 className="text-lg font-semibold text-gray-600">Applications Closed</h2>
+            <p className="text-sm text-gray-600">
+              Applications for the Travel Support Programme closed on 10 September 2026; results were
+              announced on 15 September 2026.
             </p>
-            <a
-              href="https://forms.gle/qH5vGtjwar6N2UAW6"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-[#003d7b] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#002a57]"
-            >
-              Submit Application →
-            </a>
           </section>
 
           {/* Contact & Links */}
