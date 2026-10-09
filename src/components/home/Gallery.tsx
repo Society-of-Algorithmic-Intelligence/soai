@@ -2,12 +2,17 @@ import { useMemo, useState, useCallback, useEffect } from "react";
 import { Pause, Play, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 type GalleryProps = {
-  images: Array<{ src: string; alt?: string; caption?: string }>;
+  images: Array<{ src: string; thumb?: string; alt?: string; caption?: string }>;
   speedMs?: number;
+  /** Edge fade colour: "dark" for dark backgrounds (default), "light" for white/gray backgrounds. */
+  edge?: "dark" | "light";
+  /** Pause the marquee while the pointer hovers over it. */
+  pauseOnHover?: boolean;
 };
 
-export default function Gallery({ images, speedMs = 30000 }: GalleryProps) {
+export default function Gallery({ images, speedMs = 30000, edge = "dark", pauseOnHover = false }: GalleryProps) {
   const [isPaused, setIsPaused] = useState(false);
+  const [hoverPaused, setHoverPaused] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const sequence = useMemo(() => [...images, ...images], [images]);
 
@@ -58,12 +63,14 @@ export default function Gallery({ images, speedMs = 30000 }: GalleryProps) {
           {isPaused ? <Play className="h-4 w-4" /> : <Pause className="h-4 w-4" />}
         </button>
       </div>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 mask-fade-left" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 mask-fade-right" />
+      <div className={`pointer-events-none absolute inset-y-0 left-0 w-24 ${edge === "light" ? "mask-fade-left-light" : "mask-fade-left"}`} />
+      <div className={`pointer-events-none absolute inset-y-0 right-0 w-24 ${edge === "light" ? "mask-fade-right-light" : "mask-fade-right"}`} />
 
       <div
         className="flex gap-6 marquee"
-        style={{ animationDuration: `${speedMs}ms`, animationPlayState: isPaused ? "paused" : "running" }}
+        style={{ animationDuration: `${speedMs}ms`, animationPlayState: isPaused || (pauseOnHover && hoverPaused) ? "paused" : "running" }}
+        onMouseEnter={pauseOnHover ? () => setHoverPaused(true) : undefined}
+        onMouseLeave={pauseOnHover ? () => setHoverPaused(false) : undefined}
       >
         {sequence.map((item, idx) => (
           <figure
@@ -74,10 +81,10 @@ export default function Gallery({ images, speedMs = 30000 }: GalleryProps) {
             aria-label="Open image"
           >
             <img
-              src={item.src}
+              src={item.thumb ?? item.src}
               alt={item.alt ?? "Gallery image"}
               className="w-full h-full object-cover"
-              loading="eager"
+              loading="lazy"
               fetchPriority={idx === 0 ? 'high' : 'auto'}
               decoding={idx === 0 ? 'sync' : 'async'}
             />

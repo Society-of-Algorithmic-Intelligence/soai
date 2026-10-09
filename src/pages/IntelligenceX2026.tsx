@@ -24,6 +24,7 @@ import ibmLogo from "@/assets/IntelligenceX/ibm.png";
 import rahayuImg from "@/assets/IntelligenceX/MOS Rahayu Mahzam.jpg";
 import { ExpandableBio } from "@/components/ui/ExpandableBio";
 import { IntelligenceXProgram } from "@/components/events/IntelligenceXProgram";
+import Gallery from "@/components/home/Gallery";
 
 // Full Guest of Honour (MOS) biography.
 const guestOfHonourBio = [
@@ -53,6 +54,71 @@ const sectionLinks = [
 ] as const;
 
 type SectionId = (typeof sectionLinks)[number]["id"];
+
+/* ── Conference photo galleries ────────────────────────────────────────────
+   Source photos live in src/assets/IntelligenceX/pictures (originals, not
+   committed) and are optimised into gallery/<group>/ (web, long edge 1920)
+   plus gallery/<group>/thumbs/ (marquee thumbnails, long edge 680). */
+
+type GlobeMap = Record<string, { default: string }>;
+type PhotoSlide = { src: string; thumb: string; alt: string; caption: string };
+
+const preMeetingWeb = import.meta.glob("/src/assets/IntelligenceX/gallery/pre-meeting/*.jpg", { eager: true }) as GlobeMap;
+const preMeetingThumbs = import.meta.glob("/src/assets/IntelligenceX/gallery/pre-meeting/thumbs/*.jpg", { eager: true }) as GlobeMap;
+const executiveTrackWeb = import.meta.glob("/src/assets/IntelligenceX/gallery/executive-track/*.jpg", { eager: true }) as GlobeMap;
+const executiveTrackThumbs = import.meta.glob("/src/assets/IntelligenceX/gallery/executive-track/thumbs/*.jpg", { eager: true }) as GlobeMap;
+const mainConferenceWeb = import.meta.glob("/src/assets/IntelligenceX/gallery/main-conference/*.jpg", { eager: true }) as GlobeMap;
+const mainConferenceThumbs = import.meta.glob("/src/assets/IntelligenceX/gallery/main-conference/thumbs/*.jpg", { eager: true }) as GlobeMap;
+
+const gallerySlides = (web: GlobeMap, thumbs: GlobeMap, caption: string, altBase: string): PhotoSlide[] => {
+  const keys = Object.keys(web).sort();
+  return keys.map((key, index) => {
+    const file = key.slice(key.lastIndexOf("/") + 1);
+    const dir = key.slice(0, key.lastIndexOf("/"));
+    const thumb = thumbs[`${dir}/thumbs/${file}`];
+    return {
+      src: web[key].default,
+      thumb: thumb?.default ?? web[key].default,
+      alt: `${altBase} (${index + 1} of ${keys.length})`,
+      caption,
+    };
+  });
+};
+
+const pickDay = (map: GlobeMap, day: number): GlobeMap =>
+  Object.fromEntries(Object.entries(map).filter(([key]) => key.includes(`Day${day}_`)));
+
+const preMeetingPhotos = gallerySlides(
+  preMeetingWeb,
+  preMeetingThumbs,
+  "Switzerland–Singapore AI & Quantum Pre-meeting · 10 September 2026",
+  "Pre-meeting photo",
+);
+
+const executiveTrackPhotos = gallerySlides(
+  executiveTrackWeb,
+  executiveTrackThumbs,
+  "IntelligenceX 2026 Executive Track · 28 September 2026",
+  "Executive Track photo",
+);
+
+const conferenceDayGalleries = (
+  [
+    { day: 1, date: "24" },
+    { day: 2, date: "25" },
+    { day: 3, date: "26" },
+  ] as const
+).map(({ day, date }) => {
+  const photos = gallerySlides(
+    pickDay(mainConferenceWeb, day),
+    pickDay(mainConferenceThumbs, day),
+    `IntelligenceX 2026 · Day ${day} — ${date} September 2026`,
+    `IntelligenceX 2026 Day ${day} photo`,
+  );
+  return { day, label: `Day ${day} photos · ${date} September 2026`, photos };
+});
+
+const gallerySpeed = (count: number) => Math.max(26000, count * 4600);
 
 export default function IntelligenceX2026() {
   const bgUrl = intelligenceXBg;
@@ -687,6 +753,19 @@ export default function IntelligenceX2026() {
                 </svg>
               </Link>
             </div>
+
+            {/* Pre-meeting photo gallery */}
+            <div className="space-y-2.5 pt-1">
+              <div className="flex items-center gap-3">
+                <span className="text-xs font-semibold uppercase tracking-wide text-[#003d7b]">
+                  Photos · 10 September 2026
+                </span>
+                <span className="h-px flex-1 bg-gray-200" aria-hidden="true" />
+              </div>
+              <div className="-mx-6 sm:mx-0">
+                <Gallery images={preMeetingPhotos} edge="light" pauseOnHover speedMs={gallerySpeed(preMeetingPhotos.length)} />
+              </div>
+            </div>
           </section>
 
           {/* Conference Highlights */}
@@ -724,6 +803,24 @@ export default function IntelligenceX2026() {
               </li>
 
             </ul>
+
+            {/* Conference photo galleries by day */}
+            <div className="space-y-6 pt-2">
+              <div className="flex items-center gap-3">
+                <span className="text-xs font-semibold uppercase tracking-wide text-[#003d7b]">
+                  Conference photos · 24–26 September 2026
+                </span>
+                <span className="h-px flex-1 bg-gray-200" aria-hidden="true" />
+              </div>
+              {conferenceDayGalleries.map(({ day, label, photos }) => (
+                <div key={day} className="space-y-2.5">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">{label}</p>
+                  <div className="-mx-6 sm:mx-0">
+                    <Gallery images={photos} edge="light" pauseOnHover speedMs={gallerySpeed(photos.length)} />
+                  </div>
+                </div>
+              ))}
+            </div>
           </section>
 
           {/* Keynote Speakers */}
@@ -839,6 +936,19 @@ export default function IntelligenceX2026() {
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </Link>
+
+            {/* Executive Track photo gallery */}
+            <div className="space-y-2.5 pt-1">
+              <div className="flex items-center gap-3">
+                <span className="text-xs font-semibold uppercase tracking-wide text-[#003d7b]">
+                  Photos · 28 September 2026
+                </span>
+                <span className="h-px flex-1 bg-gray-200" aria-hidden="true" />
+              </div>
+              <div className="-mx-6 sm:mx-0">
+                <Gallery images={executiveTrackPhotos} edge="light" pauseOnHover speedMs={gallerySpeed(executiveTrackPhotos.length)} />
+              </div>
+            </div>
           </section>
 
           {/* Scientific Organizing Committee */}
