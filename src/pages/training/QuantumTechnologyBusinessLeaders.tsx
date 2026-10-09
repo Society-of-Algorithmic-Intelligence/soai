@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import programmeBanner from "@/assets/training/quantum-business-leaders-programme.jpg";
 
 /**
  * Confirmed public SoAI contact email (used in the site footer and on the
@@ -33,6 +34,42 @@ export default function QuantumTechnologyBusinessLeaders() {
               ← Back to Training / Certificate Programmes
             </Link>
           </div>
+
+          {/* Programme overview — the original programme slide, presented as-is */}
+          <section className="space-y-4">
+            <h2 className="text-xl font-semibold text-gray-900">Programme Overview</h2>
+            <a
+              href={programmeBanner}
+              target="_blank"
+              rel="noreferrer"
+              className="block overflow-hidden rounded-xl border border-gray-200 shadow-sm transition hover:shadow-md"
+              aria-label="Open the full-size programme slide"
+            >
+              <img
+                src={programmeBanner}
+                alt="Quantum Technology for Business Leaders — SoAI 2027 Executive Programme (13–16 April 2027, ETH Zurich; 17 April alpine networking)"
+                className="w-full"
+                loading="lazy"
+              />
+            </a>
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href={programmeBanner}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-[#003d7b] bg-white px-5 py-2 text-sm font-semibold text-[#003d7b] shadow-sm transition hover:bg-[#f0f6ff]"
+              >
+                View full size ↗
+              </a>
+              <a
+                href={`${import.meta.env.BASE_URL}training/SoAI-2027-Quantum-Technology-for-Business-Leaders.pdf`}
+                download
+                className="inline-flex items-center justify-center rounded-full bg-[#003d7b] px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#002a57]"
+              >
+                Download programme (PDF)
+              </a>
+            </div>
+          </section>
 
           {/* About the programme */}
           <section className="rounded-lg border border-gray-200 bg-[#f9fafb] p-6 md:p-8 space-y-4">
