@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { GraduationCap, Cpu, Wrench, Scale } from "lucide-react";
 import { WorkshopMosaic } from "@/components/training/WorkshopMosaic";
+import workshopIllustration from "@/assets/training/agentic-coding/agentic-coding-workshop.jpeg";
 
 /**
  * Confirmed public SoAI contact email (used in the site footer and on the
@@ -72,6 +73,24 @@ export default function AgenticCoding() {
               ← Back to Training / Certificate Programmes
             </Link>
           </div>
+
+          {/* Workshop illustration — click to open full size */}
+          <section>
+            <a
+              href={workshopIllustration}
+              target="_blank"
+              rel="noreferrer"
+              className="block overflow-hidden rounded-xl border border-gray-200 shadow-sm transition hover:shadow-md"
+              aria-label="Open the full-size AI-COWS hands-on AI coding workshop illustration"
+            >
+              <img
+                src={workshopIllustration}
+                alt="AI-COWS — a hands-on AI coding workshop: people + AI + practice = real skills"
+                className="w-full"
+                loading="lazy"
+              />
+            </a>
+          </section>
 
           {/* About */}
           <section className="rounded-lg border border-gray-200 bg-[#f9fafb] p-6 md:p-8 space-y-4">
