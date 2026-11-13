@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Separator } from '@/components/ui/separator';
-import { Mail, Globe, Linkedin } from 'lucide-react';
+import { Mail, Globe, Linkedin, Youtube } from 'lucide-react';
 
 export default function Footer() {
   const logoImports = import.meta.glob('/src/assets/SoAI_logo.svg', { eager: true }) as Record<string, { default: string }>;
@@ -59,6 +59,18 @@ export default function Footer() {
                   aria-label="SoAI on LinkedIn"
                 >
                   LinkedIn
+                </a>
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <Youtube className="h-4 w-4 mr-2" />
+                <a
+                  href="https://www.youtube.com/@SoAI-org"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white transition-colors"
+                  aria-label="SoAI on YouTube"
+                >
+                  YouTube
                 </a>
               </div>
             </div>

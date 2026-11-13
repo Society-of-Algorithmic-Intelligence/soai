@@ -24,6 +24,7 @@ import ibmLogo from "@/assets/IntelligenceX/ibm.png";
 import rahayuImg from "@/assets/IntelligenceX/MOS Rahayu Mahzam.jpg";
 import { ExpandableBio } from "@/components/ui/ExpandableBio";
 import { IntelligenceXProgram } from "@/components/events/IntelligenceXProgram";
+import { IntelligenceXRecordings } from "@/components/events/IntelligenceXRecordings";
 import { EventPhotoBand } from "@/components/events/EventPhotoBand";
 import { conferenceDayGalleries, executiveTrackPhotos, preMeetingPhotos } from "@/data/intelligenceXPhotos";
 
@@ -37,6 +38,7 @@ const guestOfHonourBio = [
 ];
 
 const sectionLinks = [
+  { id: "recordings", label: "Recordings" },
   { id: "registration", label: "Registration" },
   { id: "guest-of-honour", label: "Guest of Honour" },
   { id: "overview", label: "Overview" },
@@ -341,6 +343,9 @@ export default function IntelligenceX2026() {
               <EventPhotoBand key={day} title={title} photos={photos} />
             ))}
           </div>
+
+          {/* Video recordings published on the SoAI YouTube channel */}
+          <IntelligenceXRecordings />
 
           {/* Partner logos – scrolling marquee */}
           <section className="pb-2">
