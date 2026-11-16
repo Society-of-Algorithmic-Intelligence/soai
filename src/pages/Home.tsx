@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import Gallery from "@/components/home/Gallery";
+import VideoHighlights from "@/components/home/VideoHighlights";
 import { recentEvents } from "@/data/events";
 import { newsItems } from "@/data/news";
 import bannerUrl from "@/assets/banner.jpg";
@@ -115,6 +116,10 @@ export default function Home() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Inside SoAI</h2>
               <div className="-mx-6 sm:mx-0" onMouseEnter={(e) => ((e.currentTarget.firstChild as HTMLElement).style.animationPlayState = 'paused')} onMouseLeave={(e) => ((e.currentTarget.firstChild as HTMLElement).style.animationPlayState = 'running')}>
                 <Gallery images={galleryImages} />
+              </div>
+              {/* Video recordings published on the SoAI YouTube channel */}
+              <div className="mt-12">
+                <VideoHighlights />
               </div>
               {/* News under gallery */}
               <div className="mt-12">
