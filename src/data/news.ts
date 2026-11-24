@@ -23,7 +23,7 @@ export const newsItems: NewsItem[] = [
     source: "Society of Algorithmic Intelligence",
     summary:
       "SoAI invites consortium members to a distinguished speaker seminar with Prof. Satoshi Matsuoka, Director of the RIKEN Center for Computational Science (R-CCS), on Friday, 27 November 2026, 10:30–11:30 AM at S17-04-04, National University of Singapore. The seminar explores AI-driven scientific discovery, next-generation supercomputing, and quantum–HPC integration.",
-    link: "/events/matsuoka-seminar",
+    link: "/events/20261127",
   },
   {
     id: "nvidia-cuopt-mpdlp-100-million-variables",

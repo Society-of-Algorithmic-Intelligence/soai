@@ -15,7 +15,7 @@ const TITLE = "AI Scientists at Scale: From Fugaku to the Next Era of Discovery"
 const EVENT_DATE = "Friday, 27 November 2026";
 const EVENT_TIME = "10:30–11:30 AM";
 const VENUE = "S17-04-04, National University of Singapore";
-const SHARE_URL = "https://www.soc-ai.org/events/matsuoka-seminar";
+const SHARE_URL = "https://www.soc-ai.org/events/20261127";
 
 const MAP_URL = `https://maps.google.com/?q=${encodeURIComponent(VENUE)}`;
 const CALENDAR_URL =

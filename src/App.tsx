@@ -64,7 +64,8 @@ function App() {
           <Route path="events/intelligencex-2026/keynote-speakers" element={<IntelligenceX2026KeynoteSpeakers />} />
           <Route path="events/intelligencex-2026/call-for-papers" element={<IntelligenceX2026CallForPapers />} />
           <Route path="events/quantum-ai-risk-management" element={<QuantumAIAndRiskManagement />} />
-          <Route path="events/matsuoka-seminar" element={<MatsuokaSeminar2026 />} />
+          <Route path="events/matsuoka-seminar" element={<Navigate to="/events/20261127" replace />} />
+          <Route path="events/20261127" element={<MatsuokaSeminar2026 />} />
           <Route path="payment-success" element={<PaymentSuccess />} />
           <Route path="news" element={<News />} />
           <Route path="maintenance" element={<Maintenance />} />
