@@ -16,6 +16,7 @@ import MembershipRegister from './pages/MembershipRegister';
 import MembershipSuccess from './pages/MembershipSuccess';
 import IntelligenceX2026 from './pages/IntelligenceX2026';
 import QuantumAIAndRiskManagement from './pages/events/Quantum_AI_and_risk_management';
+import MatsuokaSeminar2026 from './pages/events/MatsuokaSeminar2026';
 import IntelligenceX2026Tutorials from './pages/events/IntelligenceX2026Tutorials';
 import IntelligenceX2026Showcase from './pages/events/IntelligenceX2026Showcase';
 import IntelligenceX2026Accommodation from './pages/events/IntelligenceX2026Accommodation';
@@ -63,6 +64,7 @@ function App() {
           <Route path="events/intelligencex-2026/keynote-speakers" element={<IntelligenceX2026KeynoteSpeakers />} />
           <Route path="events/intelligencex-2026/call-for-papers" element={<IntelligenceX2026CallForPapers />} />
           <Route path="events/quantum-ai-risk-management" element={<QuantumAIAndRiskManagement />} />
+          <Route path="events/matsuoka-seminar" element={<MatsuokaSeminar2026 />} />
           <Route path="payment-success" element={<PaymentSuccess />} />
           <Route path="news" element={<News />} />
           <Route path="maintenance" element={<Maintenance />} />

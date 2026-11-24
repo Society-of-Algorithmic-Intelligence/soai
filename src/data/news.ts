@@ -16,6 +16,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: "soai-distinguished-speaker-seminar-satoshi-matsuoka-2026",
+    title:
+      "Distinguished Speaker Seminar: Prof. Satoshi Matsuoka on AI Scientists at Scale",
+    date: "2026-11-24",
+    source: "Society of Algorithmic Intelligence",
+    summary:
+      "SoAI invites consortium members to a distinguished speaker seminar with Prof. Satoshi Matsuoka, Director of the RIKEN Center for Computational Science (R-CCS), on Friday, 27 November 2026, 10:30–11:30 AM at S17-04-04, National University of Singapore. The seminar explores AI-driven scientific discovery, next-generation supercomputing, and quantum–HPC integration.",
+    link: "/events/matsuoka-seminar",
+  },
+  {
     id: "nvidia-cuopt-mpdlp-100-million-variables",
     title:
       "Scaling Decision Optimization to 100 Million Variables and Beyond with mPDLP in NVIDIA cuOpt",

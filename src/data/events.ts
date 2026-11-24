@@ -12,6 +12,15 @@ export type EventItem = {
 
 export const recentEvents: EventItem[] = [
   {
+    id: "matsuoka-ai-scientists-at-scale-2026",
+    title: "AI Scientists at Scale: From Fugaku to the Next Era of Discovery",
+    date: "2026-11-27",
+    location: "S17-04-04, National University of Singapore",
+    description:
+      "SoAI Distinguished Speaker Seminar with Prof. Satoshi Matsuoka, Director of the RIKEN Center for Computational Science (R-CCS), on AI-driven scientific discovery, next-generation supercomputing, and quantum–HPC integration. Friday, 27 November 2026, 10:30–11:30 AM.",
+    link: "/events/matsuoka-seminar",
+  },
+  {
     id: "quantum-ai-risk-management-pavia-2026",
     title: "Quantum AI and risk management",
     date: "2026-03-27",
