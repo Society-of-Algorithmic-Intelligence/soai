@@ -25,14 +25,14 @@ const CALENDAR_URL =
   "&ctz=Asia%2FSingapore" +
   `&location=${encodeURIComponent(VENUE)}` +
   `&details=${encodeURIComponent(
-    "SoAI Distinguished Speaker Seminar with Prof. Satoshi Matsuoka, Director of the RIKEN Center for Computational Science (R-CCS).",
+    "Distinguished Speaker Seminar with Prof. Satoshi Matsuoka, Director of the RIKEN Center for Computational Science (R-CCS).",
   )}`;
 
 const LINKEDIN_SHARE_URL = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(SHARE_URL)}`;
 const EMAIL_SHARE_URL =
-  `mailto:?subject=${encodeURIComponent(`SoAI Distinguished Speaker Seminar: ${TITLE}`)}` +
+  `mailto:?subject=${encodeURIComponent(`Distinguished Speaker Seminar: ${TITLE}`)}` +
   `&body=${encodeURIComponent(
-    `You are invited to a SoAI Distinguished Speaker Seminar.\n\n${TITLE}\nProf. Satoshi Matsuoka, Director, RIKEN Center for Computational Science (R-CCS), Japan\n\n${EVENT_DATE}\n${EVENT_TIME}\n${VENUE}\n\nDetails: ${SHARE_URL}`,
+    `You are invited to a Distinguished Speaker Seminar.\n\n${TITLE}\nProf. Satoshi Matsuoka, Director, RIKEN Center for Computational Science (R-CCS), Japan\n\n${EVENT_DATE}\n${EVENT_TIME}\n${VENUE}\n\nDetails: ${SHARE_URL}`,
   )}`;
 
 const ABSTRACT =
@@ -60,7 +60,7 @@ export default function MatsuokaSeminar2026() {
       <section className="bg-gradient-to-br from-[#003d7b] via-[#002a57] to-[#001a35] py-14 md:py-20">
         <div className="container mx-auto max-w-5xl px-6">
           <p className="text-sm font-semibold uppercase tracking-wide text-[#ffcf8c]">
-            SoAI Distinguished Speaker Seminar
+            Distinguished Speaker Seminar
           </p>
           <h1 className="mt-3 max-w-4xl text-3xl font-bold leading-tight text-white md:text-5xl">
             {TITLE}

@@ -17,7 +17,7 @@ export const recentEvents: EventItem[] = [
     date: "2026-11-27",
     location: "S17-04-04, National University of Singapore",
     description:
-      "SoAI Distinguished Speaker Seminar with Prof. Satoshi Matsuoka, Director of the RIKEN Center for Computational Science (R-CCS), on AI-driven scientific discovery, next-generation supercomputing, and quantum–HPC integration. Friday, 27 November 2026, 10:30–11:30 AM.",
+      "Distinguished Speaker Seminar with Prof. Satoshi Matsuoka, Director of the RIKEN Center for Computational Science (R-CCS), on AI-driven scientific discovery, next-generation supercomputing, and quantum–HPC integration. Friday, 27 November 2026, 10:30–11:30 AM.",
     link: "/events/20261127-282974",
   },
   {
