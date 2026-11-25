@@ -126,6 +126,7 @@ export default function Footer() {
             <p>&copy; 2025 Society of Algorithmic Intelligence (SoAI). All rights reserved.</p>
           </div>
           <div className="flex items-center space-x-6 text-sm text-gray-400">
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy</Link>
             <a href={`${import.meta.env.BASE_URL}Constitution_SoAI.pdf`} download className="hover:text-white transition-colors">Constitution</a>
             <a href={`${import.meta.env.BASE_URL}By-Laws_SoAI.pdf`} download className="hover:text-white transition-colors">By-Laws</a>
           </div>

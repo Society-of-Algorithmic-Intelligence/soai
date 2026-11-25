@@ -268,15 +268,35 @@ export async function getJob(jobId: string, signal?: AbortSignal) {
 	return data.item;
 }
 
+export type JobApplicationEducation = {
+	school: string;
+	degree: string;
+	discipline: string;
+	start_date: string;
+	end_date: string;
+};
+
 export type JobApplicationPayload = {
 	job_id: string;
 	first_name: string;
 	last_name: string;
+	preferred_first_name?: string;
 	email: string;
-	phone?: string;
+	phone: string;
+	country: string;
 	linkedin_url?: string;
-	portfolio_url?: string;
 	cover_letter?: string;
+	current_employer: string;
+	research_years: string;
+	highest_education: string;
+	current_country: string;
+	work_authorized: "Yes" | "No";
+	sponsorship_required: "Yes" | "No";
+	visa_details?: string;
+	pronouns: string;
+	referral_source: string;
+	privacy_consent: boolean;
+	education: JobApplicationEducation[];
 	resume: {
 		filename: string;
 		content_type: string;

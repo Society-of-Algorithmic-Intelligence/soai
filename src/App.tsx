@@ -7,6 +7,7 @@ import Membership from './pages/Membership';
 import Contact from './pages/Contact';
 import Jobs from './pages/Jobs';
 import JobDetail from './pages/JobDetail';
+import Privacy from './pages/Privacy';
 import Events from './pages/Events';
 import News from './pages/News';
 import TeamSection from './pages/teams/TeamSection';
@@ -50,6 +51,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="jobs" element={<Jobs />} />
           <Route path="jobs/:jobId" element={<JobDetail />} />
+          <Route path="privacy" element={<Privacy />} />
           <Route path="training" element={<TrainingProgrammes />} />
           <Route path="training/quantum-technology-for-business-leaders" element={<QuantumTechnologyBusinessLeaders />} />
           <Route path="training/agentic-coding" element={<AgenticCoding />} />
