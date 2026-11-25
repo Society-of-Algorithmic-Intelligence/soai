@@ -6,8 +6,10 @@ import {
   Briefcase,
   Building2,
   CheckCircle2,
+  ExternalLink,
   FileText,
   Loader2,
+  Mail,
   MapPin,
   Send,
   Wallet,
@@ -284,6 +286,12 @@ export default function JobDetail() {
     );
   }
 
+  const externalApplyUrl =
+    job.apply_url ||
+    (job.apply_email
+      ? `mailto:${job.apply_email}?subject=${encodeURIComponent(`Application: ${job.title}`)}`
+      : null);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
@@ -372,7 +380,53 @@ export default function JobDetail() {
               )}
 
               <section id="apply" className="scroll-mt-24">
-                {submittedId ? (
+                {externalApplyUrl ? (
+                  <div className="rounded-xl border border-[#003d7b]/20 bg-[#f0f6ff] p-6 md:p-8">
+                    <h2 className="text-2xl font-semibold text-gray-900">How to apply</h2>
+                    <p className="mt-2 text-gray-800 leading-relaxed">
+                      {job.apply_email
+                        ? "Applications for this role are handled directly by the hiring team. Please send your CV and representative publications by email."
+                        : "Applications for this role are handled directly by the hiring team. Please submit your application through the link below."}
+                    </p>
+                    {job.apply_email && (
+                      <p className="mt-4 text-gray-800">
+                        Email:{" "}
+                        <a
+                          href={`mailto:${job.apply_email}`}
+                          className="font-semibold text-[#003d7b] hover:underline"
+                        >
+                          {job.apply_email}
+                        </a>
+                      </p>
+                    )}
+                    {job.apply_url && (
+                      <p className="mt-2 break-all text-gray-800">
+                        Application page:{" "}
+                        <a
+                          href={job.apply_url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="font-semibold text-[#003d7b] hover:underline"
+                        >
+                          {job.apply_url}
+                        </a>
+                      </p>
+                    )}
+                    <a
+                      href={externalApplyUrl}
+                      target={job.apply_url ? "_blank" : undefined}
+                      rel={job.apply_url ? "noreferrer" : undefined}
+                      className="mt-6 inline-flex items-center justify-center gap-2 rounded-md bg-[#003d7b] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#002a57]"
+                    >
+                      {job.apply_url ? (
+                        <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                      ) : (
+                        <Mail className="h-4 w-4" aria-hidden="true" />
+                      )}
+                      {job.apply_url ? "Open application page" : "Email your application"}
+                    </a>
+                  </div>
+                ) : submittedId ? (
                   <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-8 text-center">
                     <CheckCircle2
                       className="mx-auto h-10 w-10 text-emerald-600"
@@ -533,10 +587,16 @@ export default function JobDetail() {
                   )}
                 </dl>
                 <a
-                  href="#apply"
+                  href={externalApplyUrl || "#apply"}
+                  target={job.apply_url ? "_blank" : undefined}
+                  rel={job.apply_url ? "noreferrer" : undefined}
                   className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#003d7b] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#002a57]"
                 >
-                  Apply for this role
+                  {externalApplyUrl
+                    ? job.apply_url
+                      ? "Apply now"
+                      : "Apply by email"
+                    : "Apply for this role"}
                 </a>
               </div>
 
@@ -544,7 +604,7 @@ export default function JobDetail() {
                 <div className="flex items-start gap-3">
                   <FileText className="mt-0.5 h-4 w-4 shrink-0 text-[#003d7b]" aria-hidden="true" />
                   <p className="text-sm leading-relaxed text-gray-600">
-                    Applications are reviewed on a rolling basis. Only shortlisted candidates will
+                    Applications are reviewed by the hiring team. Only shortlisted candidates will
                     be contacted.
                   </p>
                 </div>

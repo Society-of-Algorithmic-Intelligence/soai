@@ -245,6 +245,8 @@ export type JobPosting = {
 	responsibilities?: string | null;
 	requirements?: string | null;
 	salary_range?: string | null;
+	apply_email?: string | null;
+	apply_url?: string | null;
 	status?: string;
 	created_at?: string;
 	updated_at?: string;
