@@ -12,6 +12,7 @@ import {
   Mail,
   MapPin,
   Send,
+  Upload,
   Wallet,
   type LucideIcon,
 } from "lucide-react";
@@ -532,15 +533,33 @@ export default function JobDetail() {
                         />
                       </Field>
 
-                      <Field label="Resume" required>
-                        <input
-                          type="file"
-                          accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                          onChange={onResumeChange}
-                          className="block w-full cursor-pointer text-sm text-gray-600 file:mr-4 file:rounded-md file:border-0 file:bg-[#003d7b] file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-[#002a57]"
-                          required
-                        />
-                      </Field>
+                      <div>
+                        <span className="mb-1 block text-sm font-medium text-gray-700">
+                          Resume <span className="text-red-600">*</span>
+                        </span>
+                        <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+                          <label
+                            htmlFor="resume-upload"
+                            className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-md bg-[#003d7b] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#002a57]"
+                          >
+                            <Upload className="h-4 w-4" aria-hidden="true" />
+                            Choose file
+                          </label>
+                          <span className="min-w-0 truncate text-sm text-gray-600">
+                            {resume
+                              ? `${resume.name} (${Math.max(1, Math.round(resume.size / 1024))} KB)`
+                              : "PDF, DOC, or DOCX up to 5 MB"}
+                          </span>
+                          <input
+                            id="resume-upload"
+                            type="file"
+                            accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                            onChange={onResumeChange}
+                            className="sr-only"
+                            required
+                          />
+                        </div>
+                      </div>
 
                       <p className="text-xs leading-relaxed text-gray-500">
                         By submitting this application, you consent to SoAI storing and processing
