@@ -1,4 +1,6 @@
-const BASE_URL = "https://soai-be.soc-ai.workers.dev";
+const BASE_URL =
+	(import.meta.env.VITE_API_BASE as string | undefined)?.replace(/\/$/, "") ||
+	"https://soai-be.soc-ai.workers.dev";
 
 type HttpMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
@@ -230,6 +232,61 @@ export async function bookHotel(payload: HotelBookingPayload) {
 		nights: number;
 		price_id: string;
 	}>("/api/hotel-booking", { method: "POST", body: payload });
+}
+
+export type JobPosting = {
+	id: string;
+	title: string;
+	department?: string | null;
+	location?: string | null;
+	employment_type?: string | null;
+	summary?: string | null;
+	description?: string | null;
+	responsibilities?: string | null;
+	requirements?: string | null;
+	salary_range?: string | null;
+	status?: string;
+	created_at?: string;
+	updated_at?: string;
+};
+
+export async function getJobs(signal?: AbortSignal) {
+	const data = await fetchJson<{ items?: JobPosting[] } | JobPosting[]>("/api/jobs", {
+		method: "GET",
+		signal,
+	});
+	return Array.isArray(data) ? data : data.items ?? [];
+}
+
+export async function getJob(jobId: string, signal?: AbortSignal) {
+	const data = await fetchJson<{ item: JobPosting }>(
+		`/api/jobs/${encodeURIComponent(jobId)}`,
+		{ method: "GET", signal }
+	);
+	return data.item;
+}
+
+export type JobApplicationPayload = {
+	job_id: string;
+	first_name: string;
+	last_name: string;
+	email: string;
+	phone?: string;
+	linkedin_url?: string;
+	portfolio_url?: string;
+	cover_letter?: string;
+	resume: {
+		filename: string;
+		content_type: string;
+		data_base64: string;
+	};
+};
+
+export async function applyForJob(payload: JobApplicationPayload) {
+	return fetchJson<{ ok: boolean; application_id: string }>("/api/jobs/apply", {
+		method: "POST",
+		body: payload,
+	});
 }
 
 export const api = {

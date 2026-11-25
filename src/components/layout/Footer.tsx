@@ -113,6 +113,7 @@ export default function Footer() {
             <nav className="space-y-3">
               <Link to="/events" className="block text-sm text-gray-300 hover:text-white transition-colors">Events</Link>
               <Link to="/training" className="block text-sm text-gray-300 hover:text-white transition-colors">Training</Link>
+              <Link to="/jobs" className="block text-sm text-gray-300 hover:text-white transition-colors">Jobs</Link>
               <Link to="/news" className="block text-sm text-gray-300 hover:text-white transition-colors">News</Link>
             </nav>
           </div>

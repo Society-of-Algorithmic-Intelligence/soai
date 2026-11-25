@@ -16,6 +16,8 @@ export default function Header() {
   const isActive = (path: string) => {
     return location.pathname === path;
   };
+  const isJobsActive =
+    location.pathname === '/jobs' || location.pathname.startsWith('/jobs/');
 
   return (
     <header className="bg-white shadow-sm border-b sticky top-0 z-50">
@@ -132,6 +134,16 @@ export default function Header() {
               }`}
             >
               Training
+            </Link>
+
+            {/* Jobs */}
+            <Link
+              to="/jobs"
+              className={`text-sm font-medium transition-colors hover:text-[#003d7b] ${
+                isJobsActive ? 'text-[#003d7b] border-b-2 border-[#003d7b] pb-1' : 'text-gray-700'
+              }`}
+            >
+              Jobs
             </Link>
 
             {/* Membership */}
@@ -251,6 +263,15 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Training
+              </Link>
+              <Link
+                to="/jobs"
+                className={`text-sm font-medium transition-colors hover:text-[#003d7b] px-2 py-1 ${
+                  isJobsActive ? 'text-[#003d7b]' : 'text-gray-700'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Jobs
               </Link>
               <Link
                 to="/membership"
