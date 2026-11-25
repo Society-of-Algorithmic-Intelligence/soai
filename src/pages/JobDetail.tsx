@@ -259,7 +259,7 @@ export default function JobDetail() {
 
   if (loadError || !job) {
     return (
-      <div className="min-h-screen bg-white">
+      <div className="bg-white">
         <section className="bg-gradient-to-br from-[#003d7b] via-[#002a57] to-[#001a35] py-16">
           <div className="container mx-auto max-w-4xl px-6">
             <p className="text-sm font-semibold uppercase tracking-wide text-[#ffcf8c]">Careers at SoAI</p>
@@ -293,7 +293,7 @@ export default function JobDetail() {
       : null);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-white">
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#003d7b] via-[#002a57] to-[#001a35] py-14 md:py-20">
         <div className="container mx-auto max-w-6xl px-6">

@@ -14,7 +14,7 @@ import { getJobs, type JobPosting } from "@/lib/api";
 type SortOption = "newest" | "title";
 
 const selectClass =
-  "mt-1 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 focus:border-[#003d7b] focus:outline-none focus:ring-1 focus:ring-[#003d7b]";
+  "mt-1 w-full min-w-0 max-w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 focus:border-[#003d7b] focus:outline-none focus:ring-1 focus:ring-[#003d7b]";
 
 function uniqueSorted(values: Array<string | null | undefined>): string[] {
   return [...new Set(values.filter((value): value is string => Boolean(value)))].sort((a, b) =>
@@ -34,7 +34,7 @@ function formatPosted(value: string | null | undefined): string {
   const normalized = value.includes("T") ? value : `${value.replace(" ", "T")}Z`;
   const date = new Date(normalized);
   if (Number.isNaN(date.getTime())) return "";
-  return date.toLocaleDateString(undefined, {
+  return date.toLocaleDateString("en-GB", {
     day: "numeric",
     month: "short",
     year: "numeric",
@@ -127,7 +127,7 @@ export default function Jobs() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-white">
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#003d7b] via-[#002a57] to-[#001a35] py-14 md:py-20">
         <div className="container mx-auto max-w-6xl px-6">
@@ -148,7 +148,7 @@ export default function Jobs() {
         <div className="container mx-auto max-w-6xl px-6">
           <div className="grid gap-8 lg:grid-cols-[260px_minmax(0,1fr)]">
             {/* Filters */}
-            <aside className="lg:sticky lg:top-24 lg:self-start">
+            <aside className="min-w-0 lg:sticky lg:top-24 lg:self-start">
               <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
                 <div className="flex items-center justify-between gap-2">
                   <h2 className="text-base font-semibold text-gray-900">Filter roles</h2>
@@ -178,7 +178,7 @@ export default function Jobs() {
                         type="search"
                         value={search}
                         onChange={(event) => setSearch(event.target.value)}
-                        placeholder="Title, keyword, skill…"
+                        placeholder="Search roles…"
                         className="w-full rounded-md border border-gray-300 bg-white py-2 pl-9 pr-3 text-sm text-gray-900 focus:border-[#003d7b] focus:outline-none focus:ring-1 focus:ring-[#003d7b]"
                       />
                     </div>
@@ -277,7 +277,7 @@ export default function Jobs() {
                     id="job-sort"
                     value={sort}
                     onChange={(event) => setSort(event.target.value as SortOption)}
-                    className="rounded-md border border-gray-300 bg-white px-2.5 py-1.5 text-sm text-gray-700 focus:border-[#003d7b] focus:outline-none focus:ring-1 focus:ring-[#003d7b]"
+                    className="min-w-0 max-w-full rounded-md border border-gray-300 bg-white px-2.5 py-1.5 text-sm text-gray-700 focus:border-[#003d7b] focus:outline-none focus:ring-1 focus:ring-[#003d7b]"
                   >
                     <option value="newest">Newest</option>
                     <option value="title">Title A–Z</option>
