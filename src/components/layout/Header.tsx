@@ -74,7 +74,7 @@ export default function Header() {
               }}
             >
               <button
-                className={`text-sm font-medium inline-flex items-center gap-1 ${isActive('/about') ? 'text-[#003d7b]' : 'text-gray-700'} hover:text-[#003d7b]`}
+                className={`text-sm font-medium inline-flex items-center gap-1 ${isActive('/about') || isJobsActive ? 'text-[#003d7b]' : 'text-gray-700'} hover:text-[#003d7b]`}
                 onClick={() => setIsAboutOpen((v) => !v)}
                 aria-expanded={isAboutOpen}
                 aria-haspopup="menu"
@@ -96,6 +96,7 @@ export default function Header() {
                   <Link to="/about#about-us" className="block px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-50" onClick={() => setIsAboutOpen(false)}>About Us</Link>
                   <Link to="/about/teams/ec" className="block px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-50" onClick={() => setIsAboutOpen(false)}>Executive Committee</Link>
                   <Link to="/about/leadership-network" className="block px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-50" onClick={() => setIsAboutOpen(false)}>Leadership Network</Link>
+                  <Link to="/jobs" className="block px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-50" onClick={() => setIsAboutOpen(false)}>Job Opportunities</Link>
                   <a
                     href={`${import.meta.env.BASE_URL}Constitution_SoAI.pdf`}
                     download
@@ -134,16 +135,6 @@ export default function Header() {
               }`}
             >
               Training
-            </Link>
-
-            {/* Jobs */}
-            <Link
-              to="/jobs"
-              className={`text-sm font-medium transition-colors hover:text-[#003d7b] ${
-                isJobsActive ? 'text-[#003d7b] border-b-2 border-[#003d7b] pb-1' : 'text-gray-700'
-              }`}
-            >
-              Jobs
             </Link>
 
             {/* Membership */}
@@ -227,6 +218,7 @@ export default function Header() {
                     <Link to="/about#about-us" className="block text-sm text-gray-700 hover:text-[#003d7b]" onClick={() => setIsMenuOpen(false)}>About Us</Link>
                     <Link to="/about/teams/ec" className="block text-sm text-gray-700 hover:text-[#003d7b]" onClick={() => setIsMenuOpen(false)}>Executive Committees</Link>
                     <Link to="/about/leadership-network" className="block text-sm text-gray-700 hover:text-[#003d7b]" onClick={() => setIsMenuOpen(false)}>Leadership Network</Link>
+                    <Link to="/jobs" className="block text-sm text-gray-700 hover:text-[#003d7b]" onClick={() => setIsMenuOpen(false)}>Job Opportunities</Link>
                     <a
                       href={`${import.meta.env.BASE_URL}Constitution_SoAI.pdf`}
                       download
@@ -263,15 +255,6 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Training
-              </Link>
-              <Link
-                to="/jobs"
-                className={`text-sm font-medium transition-colors hover:text-[#003d7b] px-2 py-1 ${
-                  isJobsActive ? 'text-[#003d7b]' : 'text-gray-700'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Jobs
               </Link>
               <Link
                 to="/membership"
