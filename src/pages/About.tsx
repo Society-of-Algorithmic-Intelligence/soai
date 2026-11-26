@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 export default function About() {
   return (
     <div className="min-h-screen bg-white">
@@ -31,26 +29,6 @@ export default function About() {
             <p>
               Join us in building a globally connected, future-ready society where advanced algorithms drive human progress and technological breakthroughs.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Opportunities */}
-      <section className="pb-16">
-        <div className="container mx-auto px-6">
-          <div className="mx-auto max-w-3xl rounded-xl border border-[#003d7b]/20 bg-[#f0f6ff] px-6 py-6">
-            <h2 className="text-xl font-semibold text-[#003d7b]">Work with SoAI</h2>
-            <p className="mt-2 text-sm leading-relaxed text-gray-700">
-              We are recruiting research fellows and other roles across AI, optimization,
-              statistics, and quantum computing. Explore current openings and apply online.
-            </p>
-            <Link
-              to="/jobs"
-              className="mt-4 inline-flex items-center gap-2 rounded-md bg-[#003d7b] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#002a57]"
-            >
-              View job opportunities
-              <span aria-hidden="true">→</span>
-            </Link>
           </div>
         </div>
       </section>

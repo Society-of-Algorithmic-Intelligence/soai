@@ -44,7 +44,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             {/* Home */}
             <Link
               to="/"
@@ -74,7 +74,7 @@ export default function Header() {
               }}
             >
               <button
-                className={`text-sm font-medium inline-flex items-center gap-1 ${isActive('/about') || isJobsActive ? 'text-[#003d7b]' : 'text-gray-700'} hover:text-[#003d7b]`}
+                className={`text-sm font-medium inline-flex items-center gap-1 ${isActive('/about') ? 'text-[#003d7b]' : 'text-gray-700'} hover:text-[#003d7b]`}
                 onClick={() => setIsAboutOpen((v) => !v)}
                 aria-expanded={isAboutOpen}
                 aria-haspopup="menu"
@@ -96,7 +96,6 @@ export default function Header() {
                   <Link to="/about#about-us" className="block px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-50" onClick={() => setIsAboutOpen(false)}>About Us</Link>
                   <Link to="/about/teams/ec" className="block px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-50" onClick={() => setIsAboutOpen(false)}>Executive Committee</Link>
                   <Link to="/about/leadership-network" className="block px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-50" onClick={() => setIsAboutOpen(false)}>Leadership Network</Link>
-                  <Link to="/jobs" className="block px-3 py-2 text-sm text-gray-700 rounded hover:bg-gray-50" onClick={() => setIsAboutOpen(false)}>Job Opportunities</Link>
                   <a
                     href={`${import.meta.env.BASE_URL}Constitution_SoAI.pdf`}
                     download
@@ -165,17 +164,26 @@ export default function Header() {
             >
               News
             </Link>
+            {/* Job Opportunities */}
+            <Link
+              to="/jobs"
+              className={`text-sm font-medium transition-colors hover:text-[#003d7b] ${
+                isJobsActive ? 'text-[#003d7b] border-b-2 border-[#003d7b] pb-1' : 'text-gray-700'
+              }`}
+            >
+              Job Opportunities
+            </Link>
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <Button size="sm" className="bg-[#003d7b] hover:bg-[#002a5c]" asChild>
               <Link to="/membership">Join Now</Link>
             </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Button
               variant="ghost"
               size="sm"
@@ -193,7 +201,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t bg-white py-4">
+          <div className="lg:hidden border-t bg-white py-4">
             <nav className="flex flex-col space-y-4">
               <Link
                 to="/"
@@ -218,7 +226,6 @@ export default function Header() {
                     <Link to="/about#about-us" className="block text-sm text-gray-700 hover:text-[#003d7b]" onClick={() => setIsMenuOpen(false)}>About Us</Link>
                     <Link to="/about/teams/ec" className="block text-sm text-gray-700 hover:text-[#003d7b]" onClick={() => setIsMenuOpen(false)}>Executive Committees</Link>
                     <Link to="/about/leadership-network" className="block text-sm text-gray-700 hover:text-[#003d7b]" onClick={() => setIsMenuOpen(false)}>Leadership Network</Link>
-                    <Link to="/jobs" className="block text-sm text-gray-700 hover:text-[#003d7b]" onClick={() => setIsMenuOpen(false)}>Job Opportunities</Link>
                     <a
                       href={`${import.meta.env.BASE_URL}Constitution_SoAI.pdf`}
                       download
@@ -282,6 +289,15 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 News
+              </Link>
+              <Link
+                to="/jobs"
+                className={`text-sm font-medium transition-colors hover:text-[#003d7b] px-2 py-1 ${
+                  isJobsActive ? 'text-[#003d7b]' : 'text-gray-700'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Job Opportunities
               </Link>
               <div className="flex flex-col space-y-2 pt-4 border-t">
                 <Button size="sm" className="bg-[#003d7b] hover:bg-[#002a5c]" asChild>
